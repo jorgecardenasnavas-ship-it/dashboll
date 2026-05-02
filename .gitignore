@@ -6,3 +6,5 @@ pdf/manual.pdf
 .env
 .env.local
 .superpowers/
+
+.vercel
