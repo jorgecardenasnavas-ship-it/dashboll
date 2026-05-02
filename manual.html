@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboll · Manual de identidad</title>
+  <link rel="stylesheet" href="assets/tokens.css">
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/manual.css">
+  <script type="module" src="assets/components/dashboll-ball.js"></script>
+</head>
+<body>
+  <div class="manual-shell">
+
+    <!-- ============== NAVEGACIÓN LATERAL ============== -->
+    <aside class="manual-nav">
+      <div class="brand">dashboll</div>
+      <div class="version">v1.0 · borrador · Mayo 2026</div>
+      <ol>
+        <li><a href="#cap-01">Manifiesto</a></li>
+        <li><a href="#cap-02">El nombre</a></li>
+        <li><a href="#cap-03">El personaje</a></li>
+        <li><a href="#cap-04">Anatomía del logo</a></li>
+        <li><a href="#cap-05">Construcción</a></li>
+        <li><a href="#cap-06">Skins por deporte</a></li>
+        <li><a href="#cap-07">Sistema cromático</a></li>
+        <li><a href="#cap-08">Tipografía</a></li>
+        <li><a href="#cap-09">Voz y tono</a></li>
+        <li><a href="#cap-10">Eslóganes</a></li>
+        <li><a href="#cap-11">Aplicaciones</a></li>
+        <li><a href="#cap-12">Lo que NO es</a></li>
+        <li><a href="#cap-13">Próximos pasos</a></li>
+        <li><a href="#cap-14">Cierre</a></li>
+      </ol>
+    </aside>
+
+    <!-- ============== CAPÍTULOS ============== -->
+    <main class="manual-body">
+
+      <!-- CAP 01 · MANIFIESTO -->
+      <section class="chapter" id="cap-01">
+        <div class="chapter-header">
+          <span class="num">CAPÍTULO 01 · MANIFIESTO</span>
+          <span class="label">v1.0 · Mayo 2026</span>
+        </div>
+        <div class="chapter-content" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: var(--space-9); align-items: center;">
+          <div>
+            <div class="wordmark" style="font-size: 96px; margin-bottom: var(--space-5);">dashboll</div>
+            <p style="font-size: var(--text-md); color: #4b5563; max-width: 36ch;">La pelota está en tu panel.</p>
+            <p style="margin-top: var(--space-7); max-width: 48ch; font-size: var(--text-md);">Dashboll es la herramienta de gestión micro para academias deportivas que prefieren <strong>decisiones a fricciones</strong>. Calmada, anticipa, propone — sin servilismo y sin urgencia gratuita.</p>
+            <p style="margin-top: var(--space-4); max-width: 48ch; color: #6b7280;">Una pelota. Un panel. Un día cumplido.</p>
+          </div>
+          <div style="display: flex; justify-content: center;">
+            <dashboll-ball sport="padel" size="380"></dashboll-ball>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAP 02 · EL NOMBRE -->
+      <section class="chapter" id="cap-02">
+        <div class="chapter-header">
+          <span class="num">CAPÍTULO 02 · EL NOMBRE</span>
+          <span class="label">Etimología</span>
+        </div>
+        <div class="chapter-content">
+          <h2>Dashboard + Ball</h2>
+          <p style="margin-top: var(--space-4); max-width: 70ch;">El nombre fusiona el panel de control del gerente (<em>Dashboard</em>) con la pelota (<em>Ball</em>) — el objeto físico que su academia mueve cada día. Una palabra. Dos territorios. Un solo símbolo.</p>
+
+          <div style="margin-top: var(--space-7); display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-7);">
+            <div class="card">
+              <span class="label">DASH</span>
+              <p style="margin-top: var(--space-3); font-size: var(--text-md);">El panel — la mirada de gerente. Datos, ocupación, decisiones.</p>
+            </div>
+            <div class="card">
+              <span class="label">BOLL</span>
+              <p style="margin-top: var(--space-3); font-size: var(--text-md);">La pelota — el objeto que mueve cada hora del día.</p>
+            </div>
+          </div>
+
+          <div style="margin-top: var(--space-7);">
+            <span class="label">REGLAS DE USO</span>
+            <ul style="margin-top: var(--space-3); padding-left: var(--space-5); font-size: var(--text-sm); line-height: 1.8;">
+              <li>El wordmark va siempre en <strong>minúsculas</strong>: <code>dashboll</code></li>
+              <li>En texto corrido: <strong>Dashboll</strong> con mayúscula inicial</li>
+              <li>Pronunciación: <code>/dáʃ.bol/</code></li>
+              <li>Handle: <code>@dashboll.app</code></li>
+              <li>Nunca traducir. Nunca abreviar. Nunca escribir como "DashBoll" ni "DashboLL".</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAP 03 · EL PERSONAJE -->
+      <section class="chapter" id="cap-03">
+        <div class="chapter-header">
+          <span class="num">CAPÍTULO 03 · EL PERSONAJE</span>
+          <span class="label">Personalidad JARVIS</span>
+        </div>
+        <div class="chapter-content" style="display: grid; grid-template-columns: 240px 1fr; gap: var(--space-7); align-items: start;">
+          <dashboll-ball sport="padel" size="240"></dashboll-ball>
+          <div>
+            <h2>Dashboll es la pelota. Y la pelota es el asistente.</h2>
+            <p style="margin-top: var(--space-4); max-width: 60ch;">No hay dos personajes. Marca y asistente comparten nombre, símbolo y voz. Cuando un gerente abre la app, Dashboll le habla. Cuando un jugador reserva, Dashboll le confirma. Una sola identidad atravesando todo el producto.</p>
+
+            <div class="dashboll-says" style="margin-top: var(--space-5);">
+              <div class="head">DASHBOLL · 18:00</div>
+              He detectado 3 huecos en la franja de las 18:00.<br>
+              Te propongo 4 perfiles que encajan: Eduardo M., Carla T., Miguel R., Sofía L.<br>
+              Los tres primeros han confirmado disponibilidad.
+            </div>
+
+            <div style="margin-top: var(--space-6); display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4);">
+              <div><span class="label">RASGO</span><p style="margin-top: 2px; font-size: var(--text-sm);">Anticipa antes de que pidas</p></div>
+              <div><span class="label">RASGO</span><p style="margin-top: 2px; font-size: var(--text-sm);">Tutea con autoridad</p></div>
+              <div><span class="label">RASGO</span><p style="margin-top: 2px; font-size: var(--text-sm);">Datos con criterio</p></div>
+              <div><span class="label">RASGO</span><p style="margin-top: 2px; font-size: var(--text-sm);">Lealtad sin servilismo</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAP 04 · ANATOMÍA DEL LOGO -->
+      <section class="chapter" id="cap-04">
+        <div class="chapter-header">
+          <span class="num">CAPÍTULO 04 · ANATOMÍA DEL LOGO</span>
+          <span class="label">Despiece</span>
+        </div>
+        <div class="chapter-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-7); align-items: center;">
+          <div style="display: flex; justify-content: center;">
+            <dashboll-ball sport="padel" size="380"></dashboll-ball>
+          </div>
+          <div>
+            <h2>Tres elementos. Una identidad.</h2>
+            <ol style="margin-top: var(--space-5); padding-left: 0; list-style: none; counter-reset: anatomy;">
+              <li style="padding: var(--space-4) 0; border-bottom: 1px solid #e5e7eb;">
+                <div style="display: flex; gap: var(--space-4); align-items: baseline;">
+                  <span class="mono" style="color: var(--brew-blue); font-weight: 700;">01</span>
+                  <div>
+                    <strong>Pelota base</strong>
+                    <p style="margin-top: 2px; color: #6b7280; font-size: var(--text-sm);">Brew-blue Dashboll. Color constante para todos los deportes.</p>
+                  </div>
+                </div>
+              </li>
+              <li style="padding: var(--space-4) 0; border-bottom: 1px solid #e5e7eb;">
+                <div style="display: flex; gap: var(--space-4); align-items: baseline;">
+                  <span class="mono" style="color: var(--brew-blue); font-weight: 700;">02</span>
+                  <div>
+                    <strong>Patrón distintivo</strong>
+                    <p style="margin-top: 2px; color: #6b7280; font-size: var(--text-sm);">Costuras, hexágonos, dimples o agujeros — específicos del deporte que gestiona la academia.</p>
+                  </div>
+                </div>
+              </li>
+              <li style="padding: var(--space-4) 0;">
+                <div style="display: flex; gap: var(--space-4); align-items: baseline;">
+                  <span class="mono" style="color: var(--brew-blue); font-weight: 700;">03</span>
+                  <div>
+                    <strong>Semicírculo de cumplimiento</strong>
+                    <p style="margin-top: 2px; color: #6b7280; font-size: var(--text-sm);">75% brew (la academia) + 25% cyan (el aporte de Dashboll). La firma narrativa de la marca.</p>
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAP 05 · CONSTRUCCIÓN -->
+      <section class="chapter" id="cap-05">
+        <div class="chapter-header">
+          <span class="num">CAPÍTULO 05 · CONSTRUCCIÓN</span>
+          <span class="label">Tamaños y proporciones</span>
+        </div>
+        <div class="chapter-content">
+          <h2>Tamaños mínimos y área de protección</h2>
+          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-6); margin-top: var(--space-6); align-items: end;">
+            <div style="text-align: center;">
+              <dashboll-ball sport="padel" size="32"></dashboll-ball>
+              <div class="label" style="margin-top: var(--space-3);">32 PX · MÍNIMO</div>
+            </div>
+            <div style="text-align: center;">
+              <dashboll-ball sport="padel" size="64"></dashboll-ball>
+              <div class="label" style="margin-top: var(--space-3);">64 PX · UI</div>
+            </div>
+            <div style="text-align: center;">
+              <dashboll-ball sport="padel" size="120"></dashboll-ball>
+              <div class="label" style="margin-top: var(--space-3);">120 PX · HEADER</div>
+            </div>
+            <div style="text-align: center;">
+              <dashboll-ball sport="padel" size="200"></dashboll-ball>
+              <div class="label" style="margin-top: var(--space-3);">200 PX+ · DESTACADO</div>
+            </div>
+          </div>
+          <div class="card" style="margin-top: var(--space-7);">
+            <span class="label">REGLA DE PROTECCIÓN</span>
+            <p style="margin-top: var(--space-2);">Mantener un espacio libre alrededor del isotipo igual al <strong>25% de su tamaño</strong>. Por debajo de 32px el patrón distintivo del deporte pierde legibilidad — usar solo la pelota base + semicírculo, sin patrón.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAP 06 · SKINS POR DEPORTE -->
+      <section class="chapter" id="cap-06">
+        <div class="chapter-header">
+          <span class="num">CAPÍTULO 06 · SKINS</span>
+          <span class="label">7 deportes · 1 sistema</span>
+        </div>
+        <div class="chapter-content">
+          <p style="max-width: 70ch; color: #4b5563;">Una sola firma con siete patrones. La pelota es siempre <strong>brew-blue Dashboll</strong>. Lo que cambia es el detalle interno que identifica el deporte que gestiona la academia.</p>
+          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); margin-top: var(--space-6);">
+            <div style="text-align: center; padding: var(--space-4); background: var(--foam); border-radius: 10px;">
+              <dashboll-ball sport="padel" size="100"></dashboll-ball>
+              <div class="label" style="margin-top: var(--space-3);">PÁDEL</div>
+            </div>
+            <div style="text-align: center; padding: var(--space-4); background: var(--foam); border-radius: 10px;">
+              <dashboll-ball sport="tennis" size="100"></dashboll-ball>
+              <div class="label" style="margin-top: var(--space-3);">TENIS</div>
+            </div>
+            <div style="text-align: center; padding: var(--space-4); background: var(--foam); border-radius: 10px;">
+              <dashboll-ball sport="basket" size="100"></dashboll-ball>
+              <div class="label" style="margin-top: var(--space-3);">BÁSKET</div>
+            </div>
+            <div style="text-align: center; padding: var(--space-4); background: var(--foam); border-radius: 10px;">
+              <dashboll-ball sport="football" size="100"></dashboll-ball>
+              <div class="label" style="margin-top: var(--space-3);">FÚTBOL</div>
+            </div>
+            <div style="text-align: center; padding: var(--space-4); background: var(--foam); border-radius: 10px;">
+              <dashboll-ball sport="golf" size="100"></dashboll-ball>
+              <div class="label" style="margin-top: var(--space-3);">GOLF</div>
+            </div>
+            <div style="text-align: center; padding: var(--space-4); background: var(--foam); border-radius: 10px;">
+              <dashboll-ball sport="pickleball" size="100"></dashboll-ball>
+              <div class="label" style="margin-top: var(--space-3);">PICKLEBALL</div>
+            </div>
+            <div style="text-align: center; padding: var(--space-4); background: var(--foam); border-radius: 10px;">
+              <dashboll-ball sport="handball" size="100"></dashboll-ball>
+              <div class="label" style="margin-top: var(--space-3);">BALONMANO</div>
+            </div>
+            <div style="text-align: center; padding: var(--space-4); background: #fff7e6; border: 1px dashed #d4a04e; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+              <div style="font-family: var(--font-mono); font-size: var(--text-xs); color: #ad6b13; line-height: 1.5;">
+                <strong>+ NUEVOS</strong><br>
+                Sistema escalable<br>
+                a más deportes
+              </div>
+            </div>
+          </div>
+          <div class="card" style="margin-top: var(--space-6); background: #fff7e6; border-left: 3px solid #d4a04e;">
+            <span class="label" style="color: #ad6b13;">PENDIENTE DE DESARROLLO</span>
+            <p style="margin-top: var(--space-2); color: #7a4f0a; font-size: var(--text-sm);">Los patrones por deporte son una <strong>base de trabajo</strong>. Se refinarán iterativamente con un ilustrador profesional cuando el producto entre en producción real. El sistema (pelota brew + semicírculo + patrón en blanco) es el que se mantiene; cada patrón concreto evolucionará.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAP 07 · SISTEMA CROMÁTICO -->
+      <section class="chapter" id="cap-07">
+        <div class="chapter-header">
+          <span class="num">CAPÍTULO 07 · SISTEMA CROMÁTICO</span>
+          <span class="label">Paleta oficial</span>
+        </div>
+        <div class="chapter-content">
+          <h2>Cuatro colores. Una marca.</h2>
+          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); margin-top: var(--space-6);">
+            <div style="background: var(--brew-blue); aspect-ratio: 1; border-radius: 10px; padding: var(--space-4); display: flex; flex-direction: column; justify-content: flex-end; color: white;">
+              <div class="mono" style="font-size: var(--text-xs); letter-spacing: 0.10em;">BREW BLUE</div>
+              <div class="mono" style="font-size: var(--text-sm); margin-top: 2px;">#1A8FC7</div>
+              <div class="mono" style="font-size: 9px; margin-top: 4px; opacity: 0.7;">PELOTA · MARCA</div>
+            </div>
+            <div style="background: var(--deep); aspect-ratio: 1; border-radius: 10px; padding: var(--space-4); display: flex; flex-direction: column; justify-content: flex-end; color: white;">
+              <div class="mono" style="font-size: var(--text-xs); letter-spacing: 0.10em;">DEEP</div>
+              <div class="mono" style="font-size: var(--text-sm); margin-top: 2px;">#04476A</div>
+              <div class="mono" style="font-size: 9px; margin-top: 4px; opacity: 0.7;">TEXTO · NAVY</div>
+            </div>
+            <div style="background: var(--cyan-accent); aspect-ratio: 1; border-radius: 10px; padding: var(--space-4); display: flex; flex-direction: column; justify-content: flex-end; color: var(--deep);">
+              <div class="mono" style="font-size: var(--text-xs); letter-spacing: 0.10em;">CYAN ACCENT</div>
+              <div class="mono" style="font-size: var(--text-sm); margin-top: 2px;">#4DD0E1</div>
+              <div class="mono" style="font-size: 9px; margin-top: 4px; opacity: 0.7;">CUMPLIMIENTO</div>
+            </div>
+            <div style="background: var(--foam); aspect-ratio: 1; border-radius: 10px; padding: var(--space-4); display: flex; flex-direction: column; justify-content: flex-end; color: var(--deep); border: 1px solid #e5e7eb;">
+              <div class="mono" style="font-size: var(--text-xs); letter-spacing: 0.10em;">FOAM</div>
+              <div class="mono" style="font-size: var(--text-sm); margin-top: 2px;">#FAFAFA</div>
+              <div class="mono" style="font-size: 9px; margin-top: 4px; opacity: 0.7;">FONDO · LIGHT</div>
+            </div>
+          </div>
+          <div style="margin-top: var(--space-6); padding: var(--space-5); background: var(--deep); color: white; border-radius: 10px;">
+            <span class="label" style="color: var(--cyan-accent);">REGLA INVIOLABLE</span>
+            <p style="margin-top: var(--space-2); font-size: var(--text-md);">El semicírculo del isotipo es siempre <strong>75% brew-blue</strong> (la academia) + <strong>25% cyan-accent</strong> (lo que aporta Dashboll). No importa el deporte. No importa el contexto. Esa es la firma narrativa de la marca.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAP 08 · TIPOGRAFÍA -->
+      <section class="chapter" id="cap-08">
+        <div class="chapter-header">
+          <span class="num">CAPÍTULO 08 · TIPOGRAFÍA</span>
+          <span class="label">Geist + Geist Mono</span>
+        </div>
+        <div class="chapter-content">
+          <h2>Una familia. Dos voces.</h2>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-7); margin-top: var(--space-6);">
+            <div style="padding: var(--space-6); background: var(--foam); border-radius: 10px;">
+              <span class="label">GEIST · TEXTO</span>
+              <div style="font-size: 96px; font-weight: 800; letter-spacing: -0.04em; margin-top: var(--space-3); color: var(--deep);">Aa</div>
+              <div style="margin-top: var(--space-4); display: flex; flex-direction: column; gap: var(--space-2);">
+                <div style="font-weight: 400;">Regular · 400</div>
+                <div style="font-weight: 500;">Medium · 500</div>
+                <div style="font-weight: 700;">Bold · 700</div>
+                <div style="font-weight: 800;">ExtraBold · 800</div>
+              </div>
+            </div>
+            <div style="padding: var(--space-6); background: var(--deep); color: white; border-radius: 10px;">
+              <span class="label" style="color: var(--cyan-accent);">GEIST MONO · DATOS</span>
+              <div class="mono" style="font-size: 96px; font-weight: 700; letter-spacing: -0.02em; margin-top: var(--space-3);">87%</div>
+              <div class="mono" style="margin-top: var(--space-4); display: flex; flex-direction: column; gap: var(--space-2); font-size: var(--text-sm);">
+                <div>Cobertura ····· 87%</div>
+                <div>Hueco ········· 13%</div>
+                <div>Reservas ······ 142</div>
+                <div>Pendientes ····  03</div>
+              </div>
+            </div>
+          </div>
+          <p style="margin-top: var(--space-6); max-width: 70ch; color: #4b5563;">Geist da el cuerpo y la voz. Geist Mono da los datos. La pareja construye el lenguaje del producto: prosa por un lado, métrica por otro, sin pelearse.</p>
+        </div>
+      </section>
+
+      <!-- CAP 09 · VOZ Y TONO -->
+      <section class="chapter" id="cap-09">
+        <div class="chapter-header">
+          <span class="num">CAPÍTULO 09 · VOZ Y TONO</span>
+          <span class="label">Cómo habla Dashboll</span>
+        </div>
+        <div class="chapter-content">
+          <h2>Calma operativa. Cero ruido.</h2>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-5); margin-top: var(--space-6);">
+            <div style="padding: var(--space-5); background: #f0fdf4; border-left: 3px solid #10b981; border-radius: 8px;">
+              <span class="label" style="color: #10b981;">ASÍ SÍ</span>
+              <div style="margin-top: var(--space-3); font-family: var(--font-mono); font-size: var(--text-sm); line-height: 1.7; color: #065f46;">
+                <p>"He detectado 3 huecos en la franja de las 18:00. Te propongo 4 perfiles."</p>
+                <p>"Cobertura del miércoles: 87%. Sigues por encima de tu media."</p>
+                <p>"Reserva confirmada. Nos vemos a las 19:30."</p>
+              </div>
+            </div>
+            <div style="padding: var(--space-5); background: #fef2f2; border-left: 3px solid #dc2626; border-radius: 8px;">
+              <span class="label" style="color: #dc2626;">ASÍ NO</span>
+              <div style="margin-top: var(--space-3); font-family: var(--font-mono); font-size: var(--text-sm); line-height: 1.7; color: #991b1b;">
+                <p>"¡Hola! 👋 ¡Tienes huecos disponibles!"</p>
+                <p>"⚠️ ¡URGENTE! Optimiza tu academia YA."</p>
+                <p>"¡Wow, qué buena reserva! 🎾🎉"</p>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top: var(--space-6); display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4);">
+            <div><span class="label">RATIO</span><p style="margin-top: 2px; font-size: var(--text-sm);">95% profesional · 5% guiños</p></div>
+            <div><span class="label">EMOJIS</span><p style="margin-top: 2px; font-size: var(--text-sm);">Cero. Nunca.</p></div>
+            <div><span class="label">EXCLAMACIONES</span><p style="margin-top: 2px; font-size: var(--text-sm);">Cero. La calma transmite autoridad.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAP 10 · ESLÓGANES -->
+      <section class="chapter" id="cap-10">
+        <div class="chapter-header">
+          <span class="num">CAPÍTULO 10 · ESLÓGANES</span>
+          <span class="label">Sistema de claims</span>
+        </div>
+        <div class="chapter-content">
+          <div style="text-align: center; padding: var(--space-9) var(--space-6); background: var(--deep); color: white; border-radius: 14px;">
+            <span class="label" style="color: var(--cyan-accent);">CLAIM PRINCIPAL</span>
+            <h1 style="color: white; font-size: 64px; margin-top: var(--space-3); letter-spacing: -0.04em;">La pelota está en tu panel.</h1>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-5); margin-top: var(--space-6);">
+            <div class="card" style="text-align: center;">
+              <span class="label">ALTERNATIVO 01</span>
+              <p style="margin-top: var(--space-3); font-size: var(--text-xl); font-weight: 700; color: var(--deep);">Tu academia, en juego.</p>
+            </div>
+            <div class="card" style="text-align: center;">
+              <span class="label">ALTERNATIVO 02</span>
+              <p style="margin-top: var(--space-3); font-size: var(--text-xl); font-weight: 700; color: var(--deep);">Mueve tu club.</p>
+            </div>
+          </div>
+          <p style="margin-top: var(--space-6); max-width: 70ch; color: #4b5563; font-size: var(--text-sm);">Los tres comparten ADN: verbos de acción, palabras cortas, ningún superlativo. Si en el futuro hace falta un nuevo claim, debe pasar el filtro: ¿es directo? ¿es deportivo sin ser cliché? ¿transmite control sin urgencia?</p>
+        </div>
+      </section>
+
+      <!-- CAP 11 · APLICACIONES REALES -->
+      <section class="chapter" id="cap-11">
+        <div class="chapter-header">
+          <span class="num">CAPÍTULO 11 · APLICACIONES</span>
+          <span class="label">Mockups en producto</span>
+        </div>
+        <div class="chapter-content">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-5);">
+            <div style="background: var(--deep); border-radius: 12px; padding: var(--space-6); color: white;">
+              <span class="label" style="color: var(--cyan-accent);">VISTA · GERENTE</span>
+              <h3 style="color: white; margin-top: var(--space-3);">Ocupación · Hoy</h3>
+              <div class="mono" style="margin-top: var(--space-4); display: flex; flex-direction: column; gap: var(--space-2); font-size: var(--text-sm);">
+                <div>09:00 · pista 1 ····· <span style="color: var(--cyan-accent);">100%</span></div>
+                <div>10:30 · pista 1 ····· <span style="color: var(--cyan-accent);">100%</span></div>
+                <div>18:00 · pista 1 ····· <span style="color: #fbbf24;">050%</span></div>
+                <div>19:30 · pista 1 ····· <span style="color: var(--cyan-accent);">100%</span></div>
+              </div>
+              <div style="margin-top: var(--space-5); padding-top: var(--space-4); border-top: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; gap: var(--space-3);">
+                <dashboll-ball sport="padel" size="56"></dashboll-ball>
+                <div style="font-size: var(--text-xs);">3 huecos detectados. Te propongo 4 perfiles.</div>
+              </div>
+            </div>
+            <div style="background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: var(--space-6);">
+              <span class="label">VISTA · JUGADOR</span>
+              <h3 style="margin-top: var(--space-3);">Tu próxima clase</h3>
+              <div style="margin-top: var(--space-4); padding: var(--space-4); background: var(--foam); border-radius: 8px;">
+                <div class="mono" style="font-size: var(--text-xs); color: var(--brew-blue); letter-spacing: 0.10em;">JUEVES 04 · 19:30</div>
+                <div style="margin-top: 4px; font-weight: 700;">Iniciación · pista 3</div>
+                <div style="font-size: var(--text-sm); color: #6b7280; margin-top: 2px;">Eduardo M. · 4 jugadores</div>
+              </div>
+              <div style="margin-top: var(--space-4); display: flex; align-items: center; gap: var(--space-3);">
+                <dashboll-ball sport="padel" size="48"></dashboll-ball>
+                <div style="font-size: var(--text-xs); color: #6b7280;">Confirmada. Nos vemos a las 19:30.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAP 12 · LO QUE NO ES -->
+      <section class="chapter" id="cap-12">
+        <div class="chapter-header">
+          <span class="num">CAPÍTULO 12 · LO QUE NO ES</span>
+          <span class="label">Anti-patterns</span>
+        </div>
+        <div class="chapter-content">
+          <h2>Dashboll no es...</h2>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin-top: var(--space-5);">
+            <div style="padding: var(--space-5); background: #fef2f2; border-radius: 8px;">
+              <span class="label" style="color: #dc2626;">NO ES</span>
+              <p style="margin-top: var(--space-2); font-weight: 600;">Una marca editorial</p>
+              <p style="margin-top: 2px; color: #6b7280; font-size: var(--text-sm);">Nada de serif, cursivas, ritual matutino, copy poético.</p>
+            </div>
+            <div style="padding: var(--space-5); background: #fef2f2; border-radius: 8px;">
+              <span class="label" style="color: #dc2626;">NO ES</span>
+              <p style="margin-top: var(--space-2); font-weight: 600;">Una mascota cariñosa</p>
+              <p style="margin-top: 2px; color: #6b7280; font-size: var(--text-sm);">Dashboll no saluda con emojis ni celebra con confeti.</p>
+            </div>
+            <div style="padding: var(--space-5); background: #fef2f2; border-radius: 8px;">
+              <span class="label" style="color: #dc2626;">NO ES</span>
+              <p style="margin-top: var(--space-2); font-weight: 600;">Un SaaS genérico</p>
+              <p style="margin-top: 2px; color: #6b7280; font-size: var(--text-sm);">Cero stock photos de gente sonriendo en oficinas.</p>
+            </div>
+            <div style="padding: var(--space-5); background: #fef2f2; border-radius: 8px;">
+              <span class="label" style="color: #dc2626;">NO ES</span>
+              <p style="margin-top: var(--space-2); font-weight: 600;">Una marca alarmista</p>
+              <p style="margin-top: 2px; color: #6b7280; font-size: var(--text-sm);">Sin "¡URGENTE!", sin contadores de FOMO, sin presión.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAP 13 · PRÓXIMOS PASOS -->
+      <section class="chapter" id="cap-13">
+        <div class="chapter-header">
+          <span class="num">CAPÍTULO 13 · PRÓXIMOS PASOS</span>
+          <span class="label">Roadmap de marca</span>
+        </div>
+        <div class="chapter-content">
+          <h2>La marca crece con el producto</h2>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-5); margin-top: var(--space-6);">
+            <div class="card">
+              <span class="label">Q3 2026</span>
+              <p style="margin-top: var(--space-3); font-weight: 700;">Patrones por deporte refinados</p>
+              <p style="font-size: var(--text-sm); color: #6b7280; margin-top: var(--space-2);">Iteración con ilustrador profesional sobre los 7 deportes actuales.</p>
+            </div>
+            <div class="card">
+              <span class="label">Q4 2026</span>
+              <p style="margin-top: var(--space-3); font-weight: 700;">Expansión LATAM</p>
+              <p style="font-size: var(--text-sm); color: #6b7280; margin-top: var(--space-2);">Voz adaptada al español de México, Colombia, Argentina.</p>
+            </div>
+            <div class="card">
+              <span class="label">2027</span>
+              <p style="margin-top: var(--space-3); font-weight: 700;">Manual v2.0</p>
+              <p style="font-size: var(--text-sm); color: #6b7280; margin-top: var(--space-2);">Iconografía completa, motion design, sonido de marca.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAP 14 · CIERRE -->
+      <section class="chapter" id="cap-14">
+        <div class="chapter-header">
+          <span class="num">CAPÍTULO 14 · CIERRE</span>
+          <span class="label">Versionado</span>
+        </div>
+        <div class="chapter-content" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+          <dashboll-ball sport="padel" size="220"></dashboll-ball>
+          <div class="wordmark" style="margin-top: var(--space-6); font-size: 64px;">dashboll</div>
+          <p style="margin-top: var(--space-3); color: #6b7280; max-width: 50ch;">La pelota está en tu panel.</p>
+          <div class="mono" style="margin-top: var(--space-9); display: inline-flex; gap: var(--space-5); padding: var(--space-4) var(--space-6); background: var(--foam); border-radius: 10px; font-size: var(--text-sm);">
+            <span>Manual de identidad Dashboll</span>
+            <span style="color: var(--brew-blue); font-weight: 700;">v1.0 · BORRADOR</span>
+            <span>·</span>
+            <span>Mayo 2026</span>
+          </div>
+          <div style="margin-top: var(--space-7); font-size: var(--text-xs); color: #9ca3af; max-width: 60ch;">
+            Para uso interno y partners. Documento vivo — los patrones por deporte y aplicaciones del producto evolucionarán iterativamente.
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script>
+    // Highlight del capítulo activo en la nav lateral
+    const chapters = document.querySelectorAll('.chapter');
+    const navLinks = document.querySelectorAll('.manual-nav a');
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const id = e.target.id;
+          navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
+        }
+      });
+    }, { rootMargin: '-40% 0px -40% 0px' });
+    chapters.forEach(c => obs.observe(c));
+  </script>
+</body>
+</html>

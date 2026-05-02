@@ -1,0 +1,165 @@
+/* ====================================================================
+   Manual de identidad Dashboll · A4 landscape (297mm × 210mm)
+   ==================================================================== */
+
+.manual-shell {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: 100vh;
+}
+
+/* Navegación lateral fija */
+.manual-nav {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: var(--space-6) var(--space-5);
+  border-right: 1px solid #e5e7eb;
+  background: white;
+  overflow-y: auto;
+}
+.manual-nav .brand {
+  font-weight: 800;
+  font-size: var(--text-xl);
+  letter-spacing: -0.04em;
+  margin-bottom: var(--space-2);
+  color: var(--deep);
+}
+.manual-nav .version {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.10em;
+  color: #9ca3af;
+  margin-bottom: var(--space-6);
+}
+.manual-nav ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: chapter;
+}
+.manual-nav li {
+  counter-increment: chapter;
+  margin-bottom: var(--space-2);
+}
+.manual-nav a {
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--text-sm);
+  color: #4b5563;
+  border-radius: 6px;
+  transition: all 0.15s;
+}
+.manual-nav a::before {
+  content: counter(chapter, decimal-leading-zero);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: #9ca3af;
+  flex-shrink: 0;
+}
+.manual-nav a:hover { background: var(--foam); color: var(--deep); }
+.manual-nav a.active { background: var(--deep); color: white; }
+.manual-nav a.active::before { color: var(--cyan-accent); }
+
+/* Cuerpo del manual */
+.manual-body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cada capítulo = página A4 apaisada */
+.chapter {
+  width: var(--page-width);
+  min-height: var(--page-height);
+  padding: var(--page-margin);
+  margin: var(--space-6) auto;
+  background: white;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  position: relative;
+  page-break-after: always;
+  break-after: page;
+  display: flex;
+  flex-direction: column;
+}
+.chapter::after {
+  content: counter(page, decimal-leading-zero);
+  position: absolute;
+  bottom: 12mm;
+  right: var(--page-margin);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.10em;
+  color: #9ca3af;
+}
+.chapter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: var(--space-7);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid #e5e7eb;
+}
+.chapter-header .num {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.16em;
+  color: var(--brew-blue);
+}
+.chapter-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Wordmark Dashboll en el manual */
+.wordmark {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  color: var(--deep);
+  line-height: 1;
+}
+
+/* Bloques de cita (la voz de Dashboll) */
+.dashboll-says {
+  background: var(--deep);
+  color: white;
+  padding: var(--space-5);
+  border-radius: 10px;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  line-height: 1.7;
+}
+.dashboll-says .head {
+  color: var(--cyan-accent);
+  font-size: var(--text-xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-2);
+}
+
+/* Tarjetas de información */
+.card {
+  background: var(--foam);
+  border-radius: 10px;
+  padding: var(--space-5);
+}
+
+/* Print: oculta nav, una sección por página */
+@media print {
+  body { background: white; }
+  .manual-nav { display: none; }
+  .manual-shell { grid-template-columns: 1fr; }
+  .chapter {
+    margin: 0;
+    box-shadow: none;
+    width: 100%;
+    min-height: auto;
+    padding: var(--page-margin);
+  }
+  @page {
+    size: A4 landscape;
+    margin: 0;
+  }
+}
