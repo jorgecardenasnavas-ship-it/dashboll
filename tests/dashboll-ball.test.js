@@ -14,17 +14,10 @@ function createBall(attrs = {}) {
 describe('<dashboll-ball>', () => {
   it('renderiza un SVG', () => {
     const ball = createBall();
-    const svg = ball.querySelector('svg');
-    expect(svg).not.toBeNull();
+    expect(ball.querySelector('svg')).not.toBeNull();
   });
 
-  it('por defecto usa sport=padel', () => {
-    const ball = createBall();
-    const base = ball.querySelector('[data-role="ball-base"]');
-    expect(base.getAttribute('fill')).toBe('#d4e668');
-  });
-
-  it('por defecto usa size=100', () => {
+  it('size por defecto = 100', () => {
     const ball = createBall();
     const svg = ball.querySelector('svg');
     expect(svg.getAttribute('width')).toBe('100');
@@ -38,28 +31,31 @@ describe('<dashboll-ball>', () => {
     expect(svg.getAttribute('height')).toBe('240');
   });
 
-  it.each(SPORTS)('renderiza correctamente sport=%s', (sport) => {
+  it.each(SPORTS)('renderiza pelota base brew-blue para sport=%s', (sport) => {
     const ball = createBall({ sport });
-    const svg = ball.querySelector('svg');
-    expect(svg).not.toBeNull();
-    const base = svg.querySelector('[data-role="ball-base"]');
+    const base = ball.querySelector('[data-role="ball-base"]');
     expect(base).not.toBeNull();
+    expect(base.getAttribute('fill').toLowerCase()).toBe(BREW_BLUE);
   });
 
-  it.each(SPORTS)('barras del dashboard SIEMPRE en brew-blue para sport=%s', (sport) => {
+  it.each(SPORTS)('renderiza el semicírculo de ocupación para sport=%s', (sport) => {
     const ball = createBall({ sport });
-    const svg = ball.querySelector('svg');
-    const bars = svg.querySelectorAll('[data-role="dashboard-bar"]');
-    expect(bars.length).toBeGreaterThan(0);
-    bars.forEach(bar => {
-      expect(bar.getAttribute('fill').toLowerCase()).toBe(BREW_BLUE);
-    });
+    const bars = ball.querySelectorAll('[data-role="dashboard-bar"]');
+    expect(bars.length).toBe(2);
+  });
+
+  it.each(SPORTS)('cada deporte tiene patrón distintivo (sport=%s)', (sport) => {
+    const ball = createBall({ sport });
+    const seamsOrDimples = ball.querySelectorAll(
+      '[data-role="seam"], [data-role="dimples"], [data-role="hex"], [data-role="holes"]'
+    );
+    expect(seamsOrDimples.length).toBeGreaterThan(0);
   });
 
   it('cambiar atributo sport actualiza el render', () => {
-    const ball = createBall({ sport: 'padel' });
-    ball.setAttribute('sport', 'basket');
-    const base = ball.querySelector('[data-role="ball-base"]');
-    expect(base.getAttribute('fill')).toBe('#e8723a');
+    const ball = createBall({ sport: 'tennis' });
+    expect(ball.querySelector('[data-role="seam"]')).not.toBeNull();
+    ball.setAttribute('sport', 'football');
+    expect(ball.querySelector('[data-role="hex"]')).not.toBeNull();
   });
 });
