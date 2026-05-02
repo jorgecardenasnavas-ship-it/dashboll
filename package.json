@@ -1,0 +1,17 @@
+{
+  "name": "dashboll",
+  "version": "1.0.0",
+  "description": "Dashboll — manual de identidad y web pública",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "build:pdf": "bash scripts/build-pdf.sh",
+    "fonts:download": "bash scripts/download-fonts.sh"
+  },
+  "devDependencies": {
+    "vitest": "^2.0.0",
+    "happy-dom": "^15.0.0"
+  }
+}

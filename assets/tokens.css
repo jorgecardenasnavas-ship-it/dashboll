@@ -1,0 +1,109 @@
+/* ====================================================================
+   Dashboll · Design Tokens
+   Single source of truth for brand identity.
+   ==================================================================== */
+
+@font-face {
+  font-family: 'Geist';
+  src: url('./fonts/Geist-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Geist';
+  src: url('./fonts/Geist-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Geist';
+  src: url('./fonts/Geist-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Geist';
+  src: url('./fonts/Geist-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Geist Mono';
+  src: url('./fonts/GeistMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Geist Mono';
+  src: url('./fonts/GeistMono-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Brand palette — constant signature */
+  --brew-blue:    #1a8fc7;
+  --deep:         #04476a;
+  --cyan-accent:  #4DD0E1;
+  --foam:         #fafafa;
+
+  /* Sport ball skins */
+  --ball-padel:       #d4e668;
+  --ball-tennis:      #e8f266;
+  --ball-basket:      #e8723a;
+  --ball-football:    #ffffff;
+  --ball-golf:        #ffffff;
+  --ball-pickleball:  #ffffff;
+  --ball-handball:    #ffffff;
+
+  /* Stitch / detail colors per sport */
+  --stitch-padel:       #ffffff;
+  --stitch-tennis:      #ffffff;
+  --stitch-basket:      #1a1a1a;
+  --stitch-football:    #1a1a1a;
+  --stitch-golf:        #d4d4d4;
+  --stitch-pickleball:  #1a1a1a;
+  --stitch-handball:    #04476a;
+
+  /* Typography */
+  --font-sans: 'Geist', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, 'SF Mono', monospace;
+
+  /* Spacing scale (4px base) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+
+  /* Type scale */
+  --text-xs:   12px;
+  --text-sm:   14px;
+  --text-base: 16px;
+  --text-md:   18px;
+  --text-lg:   22px;
+  --text-xl:   28px;
+  --text-2xl:  36px;
+  --text-3xl:  48px;
+  --text-4xl:  64px;
+  --text-5xl:  96px;
+
+  /* Layout — A4 landscape */
+  --page-width:  297mm;
+  --page-height: 210mm;
+  --page-margin: 18mm;
+
+  /* Versioning */
+  --brand-version: "v1.0";
+  --brand-month:   "Mayo 2026";
+}
