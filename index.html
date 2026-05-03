@@ -149,6 +149,147 @@
       </div>
     </section>
 
+    <!-- ============== 03B · DECIDE EN SEGUNDOS ============== -->
+    <section class="decide" id="decide" aria-labelledby="decide-title" style="padding: var(--space-9) 0; background: var(--foam);">
+      <div class="container">
+        <h2 id="decide-title" style="font-size: clamp(28px, 3.5vw, 42px); letter-spacing: -0.03em; max-width: 22ch;">La academia que se gestiona sola te dice <span style="color: var(--brew-blue);">quién está rindiendo</span>, quién no, y por qué.</h2>
+        <p class="lead" style="margin-top: var(--space-4); max-width: 60ch; color: #4b5563;">Las preguntas que ya hacías cada lunes — pero ahora con respuesta inmediata. Sin Excel, sin reuniones, sin esperar al cierre del mes.</p>
+
+        <!-- Grid de preguntas + respuestas -->
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); margin-top: var(--space-7);">
+
+          <article style="background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: var(--space-5);">
+            <div class="label" style="color: var(--brew-blue);">Q · 01</div>
+            <h3 style="margin-top: var(--space-2); font-size: var(--text-md); color: var(--deep);">¿Quién es el coach con mejor rendimiento €/h?</h3>
+            <div style="margin-top: var(--space-3); padding-top: var(--space-3); border-top: 1px solid #e5e7eb; display: flex; align-items: center; gap: var(--space-2);">
+              <dashboll-ball size="32"></dashboll-ball>
+              <div style="font-size: 13px; color: var(--deep);"><strong>Eduardo M.</strong> · 47€/h · <span style="color: var(--brew-blue); font-weight: 700;">+12%</span> sobre la media.</div>
+            </div>
+          </article>
+
+          <article style="background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: var(--space-5);">
+            <div class="label" style="color: var(--brew-blue);">Q · 02</div>
+            <h3 style="margin-top: var(--space-2); font-size: var(--text-md); color: var(--deep);">¿Quién retiene mejor a los alumnos?</h3>
+            <div style="margin-top: var(--space-3); padding-top: var(--space-3); border-top: 1px solid #e5e7eb; display: flex; align-items: center; gap: var(--space-2);">
+              <dashboll-ball size="32"></dashboll-ball>
+              <div style="font-size: 13px; color: var(--deep);"><strong>Carla T.</strong> · 91% retención a 3 meses · <span style="color: var(--brew-blue); font-weight: 700;">top 1</span> de 8 coaches.</div>
+            </div>
+          </article>
+
+          <article style="background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: var(--space-5);">
+            <div class="label" style="color: var(--brew-blue);">Q · 03</div>
+            <h3 style="margin-top: var(--space-2); font-size: var(--text-md); color: var(--deep);">¿Cuánto te genera cada coach al mes?</h3>
+            <div style="margin-top: var(--space-3); padding-top: var(--space-3); border-top: 1px solid #e5e7eb; display: flex; align-items: center; gap: var(--space-2);">
+              <dashboll-ball size="32"></dashboll-ball>
+              <div style="font-size: 13px; color: var(--deep);">Ranking ordenado de tus 8 coaches con margen real, no facturado bruto.</div>
+            </div>
+          </article>
+
+          <article style="background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: var(--space-5);">
+            <div class="label" style="color: var(--brew-blue);">Q · 04</div>
+            <h3 style="margin-top: var(--space-2); font-size: var(--text-md); color: var(--deep);">¿Qué franja está infrautilizada esta semana?</h3>
+            <div style="margin-top: var(--space-3); padding-top: var(--space-3); border-top: 1px solid #e5e7eb; display: flex; align-items: center; gap: var(--space-2);">
+              <dashboll-ball size="32"></dashboll-ball>
+              <div style="font-size: 13px; color: var(--deep);">Lunes y martes 17:00 · ocupación <span style="color: var(--brew-blue); font-weight: 700;">52%</span>. Te propongo perfiles.</div>
+            </div>
+          </article>
+
+          <article style="background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: var(--space-5);">
+            <div class="label" style="color: var(--brew-blue);">Q · 05</div>
+            <h3 style="margin-top: var(--space-2); font-size: var(--text-md); color: var(--deep);">¿Cuántos alumnos están en riesgo de baja?</h3>
+            <div style="margin-top: var(--space-3); padding-top: var(--space-3); border-top: 1px solid #e5e7eb; display: flex; align-items: center; gap: var(--space-2);">
+              <dashboll-ball size="32"></dashboll-ball>
+              <div style="font-size: 13px; color: var(--deep);"><strong>4 alumnos</strong> con 3+ faltas este mes. Aviso temprano antes de que cancelen.</div>
+            </div>
+          </article>
+
+          <article style="background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: var(--space-5);">
+            <div class="label" style="color: var(--brew-blue);">Q · 06</div>
+            <h3 style="margin-top: var(--space-2); font-size: var(--text-md); color: var(--deep);">¿Quién ha trabajado más este trimestre?</h3>
+            <div style="margin-top: var(--space-3); padding-top: var(--space-3); border-top: 1px solid #e5e7eb; display: flex; align-items: center; gap: var(--space-2);">
+              <dashboll-ball size="32"></dashboll-ball>
+              <div style="font-size: 13px; color: var(--deep);">Filtros por semana, mes, trimestre, semestre, año. Cero hojas de cálculo.</div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Mockup ranking panel -->
+        <div style="margin-top: var(--space-7); display: grid; grid-template-columns: 1.3fr 1fr; gap: var(--space-5); align-items: stretch;">
+
+          <!-- Panel ranking -->
+          <div style="background: var(--deep); border-radius: 14px; padding: var(--space-6); color: white;">
+            <div style="display: flex; align-items: baseline; justify-content: space-between;">
+              <div>
+                <span class="label" style="color: var(--cyan-accent);">RANKING · COACHES</span>
+                <h3 style="color: white; margin-top: var(--space-2); font-size: var(--text-lg);">Rendimiento del trimestre</h3>
+              </div>
+              <div class="mono" style="font-size: 11px; opacity: 0.6;">Q3 · 2026</div>
+            </div>
+            <div style="margin-top: var(--space-5); display: flex; flex-direction: column; gap: var(--space-3);">
+              <div>
+                <div style="display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 4px;"><span><strong>Eduardo M.</strong></span><span class="mono" style="color: var(--cyan-accent);">47€/h · 91%</span></div>
+                <div style="height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden;"><div style="height: 100%; width: 100%; background: var(--cyan-accent); border-radius: 3px;"></div></div>
+              </div>
+              <div>
+                <div style="display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 4px;"><span><strong>Carla T.</strong></span><span class="mono" style="color: var(--cyan-accent);">41€/h · 91%</span></div>
+                <div style="height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden;"><div style="height: 100%; width: 87%; background: var(--cyan-accent); border-radius: 3px;"></div></div>
+              </div>
+              <div>
+                <div style="display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 4px;"><span><strong>Miguel R.</strong></span><span class="mono" style="opacity: 0.85;">38€/h · 78%</span></div>
+                <div style="height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden;"><div style="height: 100%; width: 78%; background: var(--brew-blue); border-radius: 3px;"></div></div>
+              </div>
+              <div>
+                <div style="display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 4px;"><span><strong>Sofía L.</strong></span><span class="mono" style="opacity: 0.85;">33€/h · 71%</span></div>
+                <div style="height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden;"><div style="height: 100%; width: 65%; background: var(--brew-blue); border-radius: 3px;"></div></div>
+              </div>
+              <div style="opacity: 0.55;">
+                <div style="display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 4px;"><span><strong>Iván P.</strong></span><span class="mono">26€/h · 58%</span></div>
+                <div style="height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden;"><div style="height: 100%; width: 48%; background: #fbbf24; border-radius: 3px;"></div></div>
+              </div>
+            </div>
+            <div style="margin-top: var(--space-5); padding-top: var(--space-4); border-top: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; gap: var(--space-2);">
+              <dashboll-ball size="32"></dashboll-ball>
+              <div style="font-size: 11px; opacity: 0.85;">Iván P. lleva 6 semanas por debajo del 60% de retención. <strong>Te sugiero conversación 1-a-1</strong> antes del cierre de mes.</div>
+            </div>
+          </div>
+
+          <!-- Bonus/Malus + Cuestionario -->
+          <div style="display: flex; flex-direction: column; gap: var(--space-4);">
+            <div style="background: white; border: 1px solid #e5e7eb; border-radius: 14px; padding: var(--space-5); flex: 1;">
+              <span class="label">SISTEMA · BONOS</span>
+              <h3 style="margin-top: var(--space-2); font-size: var(--text-md); color: var(--deep);">Bonus / Malus automático</h3>
+              <div style="margin-top: var(--space-3); display: flex; flex-direction: column; gap: var(--space-2); font-size: 13px;">
+                <div style="padding: var(--space-2) var(--space-3); background: #f0fdf4; border-left: 3px solid #10b981; border-radius: 4px;">
+                  <strong style="color: #047857;">Top 20%</strong> · <span style="color: #065f46;">+5% sobre cuota base, automático.</span>
+                </div>
+                <div style="padding: var(--space-2) var(--space-3); background: #fef2f2; border-left: 3px solid #dc2626; border-radius: 4px;">
+                  <strong style="color: #991b1b;">Bottom 20%</strong> · <span style="color: #7f1d1d;">flag de revisión 1-a-1 en el panel.</span>
+                </div>
+              </div>
+              <p style="margin-top: var(--space-3); font-size: 11px; color: #6b7280;">Tú defines la métrica compuesta (€/h, retención, asistencia, rating). Dashboll aplica los bonos al cierre de cada mes.</p>
+            </div>
+
+            <div style="background: white; border: 1px solid #e5e7eb; border-radius: 14px; padding: var(--space-5); flex: 1;">
+              <span class="label">FEEDBACK · CADA CLASE</span>
+              <h3 style="margin-top: var(--space-2); font-size: var(--text-md); color: var(--deep);">Cuestionario post-entrenamiento</h3>
+              <div style="margin-top: var(--space-3); padding: var(--space-3); background: var(--foam); border-radius: 8px; font-family: var(--font-mono); font-size: 11px; line-height: 1.7; color: var(--deep);">
+                <div style="color: var(--brew-blue); font-size: 10px; letter-spacing: 0.10em;">PUSH · 30 SEG</div>
+                <div style="margin-top: 4px;">¿Coach puntual? <span style="color: #6b7280;">Sí · No</span></div>
+                <div>¿Cogió el móvil en pista? <span style="color: #6b7280;">Sí · No</span></div>
+                <div>¿Vestimenta correcta? <span style="color: #6b7280;">Sí · No</span></div>
+                <div>Calidad de la clase <span style="color: #6b7280;">★★★★☆</span></div>
+                <div>¿Algo a mejorar? <span style="color: #6b7280;">[texto]</span></div>
+              </div>
+              <p style="margin-top: var(--space-3); font-size: 11px; color: #6b7280;">El alumno termina la clase, recibe push, contesta en 30 segundos. Datos al panel del head coach con tendencias por coach.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
     <!-- ============== 04 · CONOCE A DASHBOLL ============== -->
     <section class="meet" id="conoce" aria-labelledby="meet-title">
       <div class="container">
