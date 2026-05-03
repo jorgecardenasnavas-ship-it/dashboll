@@ -14,7 +14,7 @@
 
     <!-- ============== NAVEGACIÓN LATERAL ============== -->
     <aside class="manual-nav">
-      <div class="brand">dashboll</div>
+      <div class="brand">dashbo<span class="brand-l brand-l-1">l</span><span class="brand-l brand-l-2">l</span></div>
       <div class="version">v1.0 · borrador · Mayo 2026</div>
       <ol>
         <li><a href="#cap-01">Manifiesto</a></li>
@@ -47,13 +47,22 @@
         </div>
         <div class="chapter-content" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: var(--space-9); align-items: center;">
           <div>
-            <div class="wordmark" style="font-size: 96px; margin-bottom: var(--space-5);">dashboll</div>
+            <div style="display: inline-block; position: relative; padding-bottom: 22px; margin-bottom: var(--space-5);">
+              <div class="wordmark" style="font-size: 96px;">dashbo<span class="brand-l brand-l-1">l</span><span class="brand-l brand-l-2">l</span></div>
+              <div style="position: absolute; bottom: 0; left: 0; right: 0; display: flex; justify-content: space-between; align-items: baseline; padding-left: 8px; padding-right: 3px; font-family: var(--font-mono); font-size: 16px; letter-spacing: 0.10em; text-transform: uppercase; color: rgba(4, 71, 106, 0.55); white-space: nowrap;">
+                <span>Sport</span>
+                <span aria-hidden="true">·</span>
+                <span>Academy</span>
+                <span aria-hidden="true">·</span>
+                <span>Manager</span>
+              </div>
+            </div>
             <p style="font-size: var(--text-md); color: #4b5563; max-width: 36ch;">La pelota está en tu panel.</p>
             <p style="margin-top: var(--space-7); max-width: 48ch; font-size: var(--text-md);">Dashboll es la herramienta de gestión micro para academias deportivas que prefieren <strong>decisiones a fricciones</strong>. Calmada, anticipa, propone — sin servilismo y sin urgencia gratuita.</p>
             <p style="margin-top: var(--space-4); max-width: 48ch; color: #6b7280;">Una pelota. Un panel. Un día cumplido.</p>
           </div>
           <div style="display: flex; justify-content: center;">
-            <dashboll-ball sport="padel" size="380"></dashboll-ball>
+            <dashboll-ball size="300"></dashboll-ball>
           </div>
         </div>
       </section>
@@ -137,7 +146,7 @@
         </div>
         <div class="chapter-content" style="display: grid; grid-template-columns: 1fr 1.4fr; gap: var(--space-7); align-items: start;">
           <div style="display: flex; flex-direction: column; align-items: center; gap: var(--space-4);">
-            <dashboll-ball sport="padel" size="220"></dashboll-ball>
+            <dashboll-ball size="220"></dashboll-ball>
             <div style="text-align: center;">
               <div class="label">EL ASISTENTE</div>
               <div style="font-weight: 700; font-size: var(--text-lg); margin-top: 4px;">Dashboll</div>
@@ -176,7 +185,7 @@
         </div>
         <div class="chapter-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-7); align-items: center;">
           <div style="display: flex; justify-content: center;">
-            <dashboll-ball sport="padel" size="380"></dashboll-ball>
+            <dashboll-ball size="380"></dashboll-ball>
           </div>
           <div>
             <h2>Tres elementos. Una identidad.</h2>
@@ -227,7 +236,7 @@
             <div style="padding: var(--space-4); background: #fef2f2; border-radius: 8px; text-align: center;">
               <div style="height: 100px; display: flex; align-items: center; justify-content: center;">
                 <div style="transform: scaleY(0.6);">
-                  <dashboll-ball sport="padel" size="80"></dashboll-ball>
+                  <dashboll-ball size="80"></dashboll-ball>
                 </div>
               </div>
               <span class="label" style="color: #dc2626; margin-top: var(--space-3); display: block;">NO ESTIRAR</span>
@@ -236,7 +245,7 @@
             <div style="padding: var(--space-4); background: #fef2f2; border-radius: 8px; text-align: center;">
               <div style="height: 100px; display: flex; align-items: center; justify-content: center;">
                 <div style="filter: hue-rotate(120deg);">
-                  <dashboll-ball sport="padel" size="80"></dashboll-ball>
+                  <dashboll-ball size="80"></dashboll-ball>
                 </div>
               </div>
               <span class="label" style="color: #dc2626; margin-top: var(--space-3); display: block;">NO RECOLOREAR</span>
@@ -245,7 +254,7 @@
             <div style="padding: var(--space-4); background: #fef2f2; border-radius: 8px; text-align: center;">
               <div style="height: 100px; display: flex; align-items: center; justify-content: center;">
                 <div style="transform: rotate(15deg);">
-                  <dashboll-ball sport="padel" size="80"></dashboll-ball>
+                  <dashboll-ball size="80"></dashboll-ball>
                 </div>
               </div>
               <span class="label" style="color: #dc2626; margin-top: var(--space-3); display: block;">NO ROTAR</span>
@@ -254,7 +263,7 @@
             <div style="padding: var(--space-4); background: #fef2f2; border-radius: 8px; text-align: center;">
               <div style="height: 100px; display: flex; align-items: center; justify-content: center;">
                 <div style="border: 4px solid #dc2626; border-radius: 50%; padding: 4px;">
-                  <dashboll-ball sport="padel" size="68"></dashboll-ball>
+                  <dashboll-ball size="68"></dashboll-ball>
                 </div>
               </div>
               <span class="label" style="color: #dc2626; margin-top: var(--space-3); display: block;">NO BORDES EXTRAS</span>
@@ -263,7 +272,7 @@
             <div style="padding: var(--space-4); background: #fef2f2; border-radius: 8px; text-align: center;">
               <div style="height: 100px; display: flex; align-items: center; justify-content: center;">
                 <div style="opacity: 0.4;">
-                  <dashboll-ball sport="padel" size="80"></dashboll-ball>
+                  <dashboll-ball size="80"></dashboll-ball>
                 </div>
               </div>
               <span class="label" style="color: #dc2626; margin-top: var(--space-3); display: block;">NO TRANSPARENCIA</span>
@@ -290,25 +299,48 @@
           <h2>Tamaños mínimos y área de protección</h2>
           <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-6); margin-top: var(--space-6); align-items: end;">
             <div style="text-align: center;">
-              <dashboll-ball sport="padel" size="32"></dashboll-ball>
-              <div class="label" style="margin-top: var(--space-3);">32 PX · MÍNIMO</div>
+              <dashboll-ball size="48"></dashboll-ball>
+              <div class="label" style="margin-top: var(--space-3);">48 PX · MÍNIMO</div>
             </div>
             <div style="text-align: center;">
-              <dashboll-ball sport="padel" size="64"></dashboll-ball>
-              <div class="label" style="margin-top: var(--space-3);">64 PX · UI</div>
+              <dashboll-ball size="72"></dashboll-ball>
+              <div class="label" style="margin-top: var(--space-3);">72 PX · UI</div>
             </div>
             <div style="text-align: center;">
-              <dashboll-ball sport="padel" size="120"></dashboll-ball>
+              <dashboll-ball size="120"></dashboll-ball>
               <div class="label" style="margin-top: var(--space-3);">120 PX · HEADER</div>
             </div>
             <div style="text-align: center;">
-              <dashboll-ball sport="padel" size="200"></dashboll-ball>
+              <dashboll-ball size="200"></dashboll-ball>
               <div class="label" style="margin-top: var(--space-3);">200 PX+ · DESTACADO</div>
             </div>
           </div>
           <div class="card" style="margin-top: var(--space-7);">
-            <span class="label">REGLA DE PROTECCIÓN</span>
-            <p style="margin-top: var(--space-2);">Mantener un espacio libre alrededor del isotipo igual al <strong>25% de su tamaño</strong>. Por debajo de 32px el patrón distintivo del deporte pierde legibilidad — usar solo la pelota base + semicírculo, sin patrón.</p>
+            <span class="label">REGLA DE PROTECCIÓN · ISOTIPO</span>
+            <p style="margin-top: var(--space-2);">Mantener un espacio libre alrededor del isotipo igual al <strong>25% de su tamaño</strong>. <strong>Tamaño mínimo: 48px</strong> — por debajo, el dashboard semicircular y el patrón distintivo del deporte se difuminan y pierden legibilidad. Para escalas micro (favicon, badge, notificación) usar versión simplificada (Cap 14 · 09 · simplificado micro).</p>
+          </div>
+
+          <h2 style="margin-top: var(--space-9);">Área de protección del lockup</h2>
+          <p style="max-width: 70ch; color: #4b5563; margin-top: var(--space-3);">Cuando el lockup convive con otros elementos (texto, imagen, otros logos), debe respetarse un colchón mínimo igual a la <strong>cap-height del wordmark</strong> alrededor de toda la composición. Nada cruza esa frontera — ni textos, ni bordes, ni gráficos.</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); margin-top: var(--space-6);">
+            <div style="padding: var(--space-7); background: var(--foam); border-radius: 10px; border: 2px dashed rgba(26,143,199,0.35); position: relative;">
+              <div style="position: absolute; top: var(--space-3); left: var(--space-3); font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.10em; color: var(--brew-blue);">X · CAP-HEIGHT</div>
+              <div style="display: flex; align-items: center; justify-content: center; gap: var(--space-1); height: 110px;">
+                <dashboll-ball size="56"></dashboll-ball>
+                <div class="wordmark" style="font-size: 32px;">dashbo<span class="brand-l brand-l-1">l</span><span class="brand-l brand-l-2">l</span></div>
+              </div>
+              <p style="font-size: 11px; color: #6b7280; margin-top: var(--space-3); text-align: center;">El borde discontinuo cyan marca el aire mínimo: una <strong>cap-height (X)</strong> alrededor de la composición. Nada entra ahí.</p>
+            </div>
+            <div style="padding: var(--space-5); background: white; border: 1px solid #e5e7eb; border-radius: 10px;">
+              <span class="label">QUÉ NO HACER</span>
+              <ul style="margin-top: var(--space-3); padding-left: var(--space-4); font-size: 12px; color: #4b5563; line-height: 1.7;">
+                <li>Pegar texto al lockup sin respetar la cap-height de aire.</li>
+                <li>Apoyar el lockup contra un borde de imagen o de container.</li>
+                <li>Superponer el lockup a un fondo con ruido visual sin colchón.</li>
+                <li>Reducir el aire en composiciones "compactas" para ganar espacio.</li>
+              </ul>
+              <p style="font-size: 11px; color: #6b7280; margin-top: var(--space-3);"><strong>El aire es parte del logo</strong>, no decoración. Quitarlo degrada la presencia de la marca.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -320,7 +352,7 @@
           <span class="label">7 deportes · 1 sistema</span>
         </div>
         <div class="chapter-content">
-          <p style="max-width: 70ch; color: #4b5563;">Una sola firma con siete patrones. La pelota es siempre <strong>brew-blue Dashboll</strong>. Lo que cambia es el detalle interno que identifica el deporte que gestiona la academia.</p>
+          <p style="max-width: 70ch; color: #4b5563;">El isotipo de marca es genérico. Cuando la marca se aplica al producto de una academia concreta, el patrón interno cambia para identificar el deporte. La pelota es siempre <strong>brew-blue Dashboll</strong> — solo cambia el detalle interno. Estas siete son skins, no variantes de marca.</p>
           <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); margin-top: var(--space-6);">
             <div style="text-align: center; padding: var(--space-4); background: var(--foam); border-radius: 10px;">
               <dashboll-ball sport="padel" size="100"></dashboll-ball>
@@ -569,7 +601,7 @@
                 <div style="display: flex; align-items: center; gap: var(--space-3); padding-bottom: var(--space-2); border-bottom: 1px solid #e5e7eb;">
                   <dashboll-ball sport="padel" size="32"></dashboll-ball>
                   <div>
-                    <div class="wordmark" style="font-size: 16px;">dashboll</div>
+                    <div class="wordmark wordmark-flat" style="font-size: 16px;">dashbo<span class="brand-l brand-l-1">l</span><span class="brand-l brand-l-2">l</span></div>
                     <div style="font-size: 10px; color: #9ca3af;">noreply@dashboll.app</div>
                   </div>
                 </div>
@@ -603,68 +635,168 @@
           <span class="label">Sistema de versiones del logo</span>
         </div>
         <div class="chapter-content">
-          <h2>Una marca. Seis versiones canónicas.</h2>
-          <p style="max-width: 70ch; margin-top: var(--space-4); color: #4b5563;">Cada versión sirve a un contexto distinto. Nada se inventa fuera de estas seis. Si necesitas una variante nueva, documéntala antes de usarla.</p>
+          <h2>Una marca. Once versiones canónicas.</h2>
+          <p style="max-width: 70ch; margin-top: var(--space-4); color: #4b5563;">Cada versión sirve a un contexto distinto. Los lockups viven en positivo y negativo a color, más dos variantes con respaldo (horizontal y vertical), dos a 1 tinta (negro o blanco) para impresión limitada, y una excepción simplificada para escalas micro. Nada se inventa fuera de estas once — si necesitas una variante nueva, documéntala antes de usarla.</p>
 
-          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); margin-top: var(--space-6);">
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); margin-top: var(--space-6);">
 
             <!-- 1 · Isotipo solo -->
             <div style="padding: var(--space-5); background: var(--foam); border-radius: 10px;">
               <span class="label">01 · ISOTIPO</span>
               <div style="display: flex; align-items: center; justify-content: center; height: 110px; margin-top: var(--space-3);">
-                <dashboll-ball sport="padel" size="100"></dashboll-ball>
+                <dashboll-ball size="100"></dashboll-ball>
               </div>
-              <p style="font-size: 11px; color: #6b7280; margin-top: var(--space-3);">Pelota + semicírculo. Para favicon, app icon, redes (avatar).</p>
+              <p style="font-size: 11px; color: #6b7280; margin-top: var(--space-3);">Pelota + semicírculo, sin patrón deportivo. <strong>Esta es la marca</strong>. Las variantes por deporte se documentan en Cap 08.</p>
             </div>
 
             <!-- 2 · Logotipo solo -->
             <div style="padding: var(--space-5); background: var(--foam); border-radius: 10px;">
               <span class="label">02 · LOGOTIPO</span>
               <div style="display: flex; align-items: center; justify-content: center; height: 110px; margin-top: var(--space-3);">
-                <div class="wordmark" style="font-size: 40px;">dashboll</div>
+                <div class="wordmark" style="font-size: 40px;">dashbo<span class="brand-l brand-l-1">l</span><span class="brand-l brand-l-2">l</span></div>
               </div>
               <p style="font-size: 11px; color: #6b7280; margin-top: var(--space-3);">Solo palabra. Texto inline, papelería, facturas.</p>
             </div>
 
-            <!-- 3 · Lockup horizontal -->
+            <!-- 3 · Horizontal positivo -->
             <div style="padding: var(--space-5); background: var(--foam); border-radius: 10px;">
-              <span class="label">03 · LOCKUP HORIZONTAL</span>
-              <div style="display: flex; align-items: center; justify-content: center; gap: var(--space-3); height: 110px; margin-top: var(--space-3);">
-                <dashboll-ball sport="padel" size="80"></dashboll-ball>
-                <div class="wordmark" style="font-size: 32px;">dashboll</div>
+              <span class="label">03 · HORIZONTAL · POSITIVO</span>
+              <div style="display: flex; align-items: center; justify-content: center; gap: var(--space-1); height: 110px; margin-top: var(--space-3);">
+                <dashboll-ball size="88"></dashboll-ball>
+                <div class="wordmark" style="font-size: 32px;">dashbo<span class="brand-l brand-l-1">l</span><span class="brand-l brand-l-2">l</span></div>
               </div>
-              <p style="font-size: 11px; color: #6b7280; margin-top: var(--space-3);">Headers de web, firmas de email, footers.</p>
+              <p style="font-size: 11px; color: #6b7280; margin-top: var(--space-3);">Headers de web, firmas de email, footers sobre fondos claros.</p>
             </div>
 
-            <!-- 4 · Lockup vertical -->
-            <div style="padding: var(--space-5); background: var(--foam); border-radius: 10px;">
-              <span class="label">04 · LOCKUP VERTICAL</span>
-              <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--space-2); height: 110px; margin-top: var(--space-3);">
-                <dashboll-ball sport="padel" size="60"></dashboll-ball>
-                <div class="wordmark" style="font-size: 22px;">dashboll</div>
-              </div>
-              <p style="font-size: 11px; color: #6b7280; margin-top: var(--space-3);">Covers, hero sections, contextos centrados.</p>
-            </div>
-
-            <!-- 5 · Sobre fondo oscuro -->
+            <!-- 4 · Horizontal negativo -->
             <div style="padding: var(--space-5); background: var(--deep); border-radius: 10px;">
-              <span class="label" style="color: var(--cyan-accent);">05 · NEGATIVO · DARK</span>
-              <div style="display: flex; align-items: center; justify-content: center; gap: var(--space-3); height: 110px; margin-top: var(--space-3);">
-                <dashboll-ball sport="padel" size="80"></dashboll-ball>
-                <div class="wordmark" style="font-size: 32px; color: white;">dashboll</div>
+              <span class="label" style="color: var(--cyan-accent);">04 · HORIZONTAL · NEGATIVO</span>
+              <div style="display: flex; align-items: center; justify-content: center; gap: var(--space-1); height: 110px; margin-top: var(--space-3);">
+                <dashboll-ball size="88"></dashboll-ball>
+                <div class="wordmark" style="font-size: 32px; color: white; --ll-base: white;">dashbo<span class="brand-l brand-l-1">l</span><span class="brand-l brand-l-2">l</span></div>
               </div>
-              <p style="font-size: 11px; color: #a8c5d4; margin-top: var(--space-3);">Para fondos deep o imágenes. Wordmark en blanco, isotipo intacto.</p>
+              <p style="font-size: 11px; color: #a8c5d4; margin-top: var(--space-3);">Mismo lockup sobre fondos deep o imágenes oscuras. Wordmark en blanco, isotipo intacto.</p>
             </div>
 
-            <!-- 6 · Simplificado micro -->
+            <!-- 5 · Vertical positivo -->
             <div style="padding: var(--space-5); background: var(--foam); border-radius: 10px;">
-              <span class="label">06 · SIMPLIFICADO · MICRO</span>
-              <div style="display: flex; align-items: center; justify-content: center; gap: var(--space-3); height: 110px; margin-top: var(--space-3);">
-                <dashboll-ball sport="padel" size="24"></dashboll-ball>
-                <dashboll-ball sport="padel" size="32"></dashboll-ball>
-                <dashboll-ball sport="padel" size="48"></dashboll-ball>
+              <span class="label">05 · VERTICAL · POSITIVO</span>
+              <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0; height: 156px; margin-top: var(--space-3);">
+                <dashboll-ball size="88"></dashboll-ball>
+                <div class="wordmark" style="font-size: 22px; margin-top: -7px;">dashbo<span class="brand-l brand-l-1">l</span><span class="brand-l brand-l-2">l</span></div>
               </div>
-              <p style="font-size: 11px; color: #6b7280; margin-top: var(--space-3);">A 32px o menos, el patrón distintivo se difumina — solo pelota + semicírculo. Es correcto.</p>
+              <p style="font-size: 11px; color: #6b7280; margin-top: var(--space-3);">Covers, hero sections, contextos centrados sobre fondos claros.</p>
+            </div>
+
+            <!-- 6 · Vertical negativo -->
+            <div style="padding: var(--space-5); background: var(--deep); border-radius: 10px;">
+              <span class="label" style="color: var(--cyan-accent);">06 · VERTICAL · NEGATIVO</span>
+              <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0; height: 156px; margin-top: var(--space-3);">
+                <dashboll-ball size="88"></dashboll-ball>
+                <div class="wordmark" style="font-size: 22px; color: white; --ll-base: white; margin-top: -7px;">dashbo<span class="brand-l brand-l-1">l</span><span class="brand-l brand-l-2">l</span></div>
+              </div>
+              <p style="font-size: 11px; color: #a8c5d4; margin-top: var(--space-3);">Mismo lockup vertical sobre fondos deep. Wordmark en blanco.</p>
+            </div>
+
+            <!-- 7 · 1 tinta · Negro -->
+            <div style="padding: var(--space-5); background: white; border: 1px solid #e5e7eb; border-radius: 10px;">
+              <span class="label">07 · 1 TINTA · NEGRO</span>
+              <div style="display: flex; align-items: center; justify-content: center; gap: var(--space-1); height: 110px; margin-top: var(--space-3);">
+                <dashboll-ball size="88" tone="black"></dashboll-ball>
+                <div class="wordmark" style="font-size: 32px; color: #000; --ll-base: #000; --cyan-tone: rgba(0,0,0,0.55);">dashbo<span class="brand-l brand-l-1">l</span><span class="brand-l brand-l-2">l</span></div>
+              </div>
+              <p style="font-size: 11px; color: #6b7280; margin-top: var(--space-3);">Una sola tinta para impresión B/N, fax, grabados, sellos. Pelota + wordmark sólidos en negro; las escalas las da la opacidad del semicírculo.</p>
+            </div>
+
+            <!-- 8 · 1 tinta · Blanco -->
+            <div style="padding: var(--space-5); background: #000; border-radius: 10px;">
+              <span class="label" style="color: #ffffff;">08 · 1 TINTA · BLANCO</span>
+              <div style="display: flex; align-items: center; justify-content: center; gap: var(--space-1); height: 110px; margin-top: var(--space-3);">
+                <dashboll-ball size="88" tone="white"></dashboll-ball>
+                <div class="wordmark" style="font-size: 32px; color: white; --ll-base: white; --cyan-tone: rgba(255,255,255,0.55);">dashbo<span class="brand-l brand-l-1">l</span><span class="brand-l brand-l-2">l</span></div>
+              </div>
+              <p style="font-size: 11px; color: #d4d4d8; margin-top: var(--space-3);">Calado en blanco sobre fondos negros, fotografía oscura o cualquier soporte que requiera sustracción de tinta.</p>
+            </div>
+
+            <!-- Regla de uso del respaldo (umbral) -->
+            <div style="grid-column: 1 / -1; padding: var(--space-5); background: white; border: 1px solid #e5e7eb; border-radius: 10px;">
+              <span class="label">REGLA DE USO · RESPALDO</span>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); margin-top: var(--space-4); align-items: end;">
+                <!-- Sí: ≥ 30px wordmark -->
+                <div style="text-align: center; padding: var(--space-4); background: var(--foam); border-radius: 8px;">
+                  <div style="display: flex; flex-direction: column; align-items: center; gap: 0;">
+                    <dashboll-ball size="48"></dashboll-ball>
+                    <div style="display: flex; flex-direction: column; gap: 0;">
+                      <div class="wordmark" style="font-size: 30px; margin-top: -6px;">dashbo<span class="brand-l brand-l-1">l</span><span class="brand-l brand-l-2">l</span></div>
+                      <div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: -2px; padding-left: 2px; padding-right: 1px; font-family: var(--font-mono); font-size: 7.5px; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(4, 71, 106, 0.55); white-space: nowrap;">
+                        <span>Sport</span><span aria-hidden="true">·</span><span>Academy</span><span aria-hidden="true">·</span><span>Manager</span>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="label" style="display: block; margin-top: var(--space-3); color: #047857;">SÍ · WORDMARK ≥ 30PX</span>
+                  <p style="font-size: 11px; color: #6b7280; margin-top: 4px;">Iso ≥ 48px (horizontal) o ≥ 64px (vertical). El descriptor entra legible y cuadra al ancho del wordmark.</p>
+                </div>
+                <!-- No: < 30px wordmark -->
+                <div style="text-align: center; padding: var(--space-4); background: #fef2f2; border-radius: 8px;">
+                  <div style="display: flex; align-items: center; justify-content: center; gap: var(--space-2);">
+                    <dashboll-ball size="32"></dashboll-ball>
+                    <div class="wordmark" style="font-size: 22px;">dashbo<span class="brand-l brand-l-1">l</span><span class="brand-l brand-l-2">l</span></div>
+                  </div>
+                  <span class="label" style="display: block; margin-top: var(--space-3); color: #dc2626;">NO · WORDMARK &lt; 30PX</span>
+                  <p style="font-size: 11px; color: #991b1b; margin-top: 4px;">A wordmark <strong>menor de 30px</strong> el descriptor pierde legibilidad o no entra en el ancho. <strong>Solo lockup base</strong> — sin respaldo.</p>
+                </div>
+              </div>
+              <p style="font-size: 11px; color: #4b5563; margin-top: var(--space-4); max-width: 80ch;"><strong>Umbral mínimo para usar respaldo:</strong> wordmark <strong>30px font-size</strong>, iso <strong>48px (horizontal)</strong> o <strong>64px (vertical)</strong>. Por debajo, mostrar lockup base sin descriptor — el descriptor a menor tamaño se vuelve ilegible o no encaja en el ancho del wordmark, rompiendo el sistema.</p>
+              <p style="font-size: 11px; color: #4b5563; margin-top: var(--space-3); max-width: 80ch;"><strong>Umbral de las puntas cyan en las "ll":</strong> activas a partir de wordmark <strong>22px font-size</strong>. Por debajo (footer mini, mockups UI, notificaciones), aplicar la clase <code>.wordmark-flat</code> al wordmark para renderizar las "ll" en deep sólido — las puntas cyan a tamaño tan pequeño se vuelven invisibles o ruido visual.</p>
+            </div>
+
+            <!-- 10 · Respaldo horizontal (descriptor bajo el wordmark) -->
+            <div style="padding: var(--space-5); background: var(--foam); border-radius: 10px;">
+              <span class="label">10 · HORIZONTAL · CON RESPALDO</span>
+              <div style="display: flex; align-items: center; justify-content: center; gap: var(--space-1); height: 170px; margin-top: var(--space-3);">
+                <dashboll-ball size="96"></dashboll-ball>
+                <div style="position: relative;">
+                  <div class="wordmark" style="font-size: 36px;">dashbo<span class="brand-l brand-l-1">l</span><span class="brand-l brand-l-2">l</span></div>
+                  <div style="position: absolute; top: 100%; left: 0; right: 0; margin-top: -2px; display: flex; justify-content: space-between; align-items: baseline; padding-left: 3px; padding-right: 1px; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(4, 71, 106, 0.55); white-space: nowrap;">
+                    <span>Sport</span>
+                    <span aria-hidden="true">·</span>
+                    <span>Academy</span>
+                    <span aria-hidden="true">·</span>
+                    <span>Manager</span>
+                  </div>
+                </div>
+              </div>
+              <p style="font-size: 11px; color: #6b7280; margin-top: var(--space-3);">Descriptor con ancho del wordmark, alineado ópticamente al visible de "dashboll" (padding-left 3px compensa el left side bearing del glyph "d"). Mono 9px, letter-spacing 0.08em, color deep al 55%. Iso anclado al centro óptico del bloque wordmark+descriptor. Para firmas de email, papelería, footers institucionales.</p>
+            </div>
+
+            <!-- 11 · Respaldo vertical -->
+            <div style="padding: var(--space-5); background: var(--foam); border-radius: 10px;">
+              <span class="label">11 · VERTICAL · CON RESPALDO</span>
+              <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0; height: 220px; margin-top: var(--space-3);">
+                <dashboll-ball size="112"></dashboll-ball>
+                <div style="display: flex; flex-direction: column; gap: 0;">
+                  <div class="wordmark" style="font-size: 36px; margin-top: -10px;">dashbo<span class="brand-l brand-l-1">l</span><span class="brand-l brand-l-2">l</span></div>
+                  <div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 6px; padding-left: 3px; padding-right: 1px; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(4, 71, 106, 0.55); white-space: nowrap;">
+                    <span>Sport</span>
+                    <span aria-hidden="true">·</span>
+                    <span>Academy</span>
+                    <span aria-hidden="true">·</span>
+                    <span>Manager</span>
+                  </div>
+                </div>
+              </div>
+              <p style="font-size: 11px; color: #6b7280; margin-top: var(--space-3);">Versión vertical con respaldo. El wordmark se sube a 36px (vs 22px del lockup vertical base) para que el descriptor encaje al mismo ancho. Iso a 80px para mantener la proporción visual de versión vertical. Para covers, hero sections, intros centradas.</p>
+            </div>
+
+            <!-- 09 · Simplificado micro (excepción: favicon, badge, notificación) -->
+            <div style="padding: var(--space-5); background: var(--foam); border-radius: 10px;">
+              <span class="label">09 · SIMPLIFICADO · MICRO</span>
+              <div style="display: flex; align-items: center; justify-content: center; gap: var(--space-3); height: 110px; margin-top: var(--space-3);">
+                <dashboll-ball size="24"></dashboll-ball>
+                <dashboll-ball size="32"></dashboll-ball>
+                <dashboll-ball size="48"></dashboll-ball>
+              </div>
+              <p style="font-size: 11px; color: #6b7280; margin-top: var(--space-3);"><strong>Excepción al mínimo de 48px</strong> — solo permitida en favicon, app icon, badge de notificación o avatar de redes. A esta escala el patrón distintivo del deporte se difumina (es correcto): solo pelota + semicírculo.</p>
             </div>
 
           </div>
@@ -739,9 +871,18 @@
           <span class="label">Documento vivo</span>
         </div>
         <div class="chapter-content" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-          <dashboll-ball sport="padel" size="200"></dashboll-ball>
-          <div class="wordmark" style="margin-top: var(--space-6); font-size: 64px;">dashboll</div>
-          <p style="margin-top: var(--space-3); color: #6b7280; max-width: 50ch;">La pelota está en tu panel.</p>
+          <dashboll-ball size="200"></dashboll-ball>
+          <div style="display: inline-block; position: relative; padding-bottom: 22px; margin-top: -16px;">
+            <div class="wordmark" style="font-size: 64px;">dashbo<span class="brand-l brand-l-1">l</span><span class="brand-l brand-l-2">l</span></div>
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; display: flex; justify-content: space-between; align-items: baseline; padding-left: 5px; padding-right: 2px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.10em; text-transform: uppercase; color: rgba(4, 71, 106, 0.55); white-space: nowrap;">
+              <span>Sport</span>
+              <span aria-hidden="true">·</span>
+              <span>Academy</span>
+              <span aria-hidden="true">·</span>
+              <span>Manager</span>
+            </div>
+          </div>
+          <p style="margin-top: var(--space-5); color: #6b7280; max-width: 50ch;">La pelota está en tu panel.</p>
 
           <div style="margin-top: var(--space-7); display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-5); width: 100%; max-width: 560px;">
             <div class="card" style="text-align: left;">
