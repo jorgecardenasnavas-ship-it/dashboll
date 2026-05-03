@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "happy-dom": "^15.0.0",
+    "lighthouse": "^13.2.0",
     "pdf-to-png-converter": "^4.0.0",
     "puppeteer": "^24.42.0",
     "vitest": "^2.0.0"
