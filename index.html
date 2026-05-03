@@ -49,7 +49,7 @@
       <ul>
         <li><a href="#producto">Producto</a></li>
         <li><a href="#multideporte">Multideporte</a></li>
-        <li><a href="#precios">Precios</a></li>
+        <li><a href="#precios">Planes</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
       <a href="#demo" class="cta">Reservar demo</a>
@@ -462,51 +462,194 @@
       </div>
     </section>
 
-    <!-- ============== 11 · PRICING ============== -->
+    <!-- ============== 11 · PLANES ============== -->
     <section class="pricing" id="precios" aria-labelledby="pricing-title">
       <div class="container">
-        <h2 id="pricing-title">Crece a tu ritmo.</h2>
-        <p class="lead">Sin permanencia, sin coste de implantación. Cambia de plan cuando quieras.</p>
-        <div class="price-grid">
+        <h2 id="pricing-title">Planes.</h2>
+        <p class="lead">Sin permanencia, sin coste de implantación. Cambia de plan cuando quieras. Tus datos siempre se quedan contigo.</p>
+
+        <!-- Founders' cohort banner -->
+        <div class="founders-banner">
+          <div class="founders-tag">FOUNDERS' COHORT · TIEMPO LIMITADO</div>
+          <div class="founders-copy">
+            <strong>50% de descuento de por vida</strong> para las primeras <strong>20 academias</strong> que firmen antes del <strong>1 de junio 2026</strong>.
+          </div>
+        </div>
+
+        <div class="price-grid five">
+          <article class="price-card">
+            <div class="name">Coach</div>
+            <div class="when">Entrenador individual</div>
+            <div class="amount">€15</div>
+            <div class="amount-when">/ mes · anual · €20 mensual</div>
+            <ul>
+              <li>Hasta 30 alumnos</li>
+              <li>1 entrenador (tú)</li>
+              <li>Agenda + asistencia</li>
+              <li>Stripe básico</li>
+              <li>Comunicación 1:1</li>
+              <li class="muted">Sin app con tu marca</li>
+            </ul>
+            <a href="#demo" class="btn btn-secondary">Empezar gratis</a>
+          </article>
           <article class="price-card">
             <div class="name">Starter</div>
-            <div class="when">Hasta 1 pista · 80 alumnos</div>
-            <div class="amount">€44</div>
-            <div class="amount-when">/ mes · facturado anual</div>
+            <div class="when">Pequeñas academias</div>
+            <div class="amount">€39</div>
+            <div class="amount-when">/ mes · anual · €52 mensual</div>
             <ul>
+              <li>Hasta 100 alumnos</li>
+              <li>1-2 pistas · 2 coaches</li>
               <li>App móvil con tu marca</li>
-              <li>CRM de leads</li>
-              <li>Agenda + pistas</li>
-              <li>Stripe + wallet</li>
+              <li>Stripe + SEPA</li>
+              <li>CRM básico</li>
+              <li>Bonos y packs</li>
             </ul>
             <a href="#demo" class="btn btn-secondary">Empezar gratis</a>
           </article>
           <article class="price-card highlight">
             <div class="name">Academy</div>
-            <div class="when">Hasta 6 pistas · 500 alumnos</div>
-            <div class="amount">€97</div>
-            <div class="amount-when">/ mes · facturado anual</div>
+            <div class="when">Academias en crecimiento</div>
+            <div class="amount">€89</div>
+            <div class="amount-when">/ mes · anual · €119 mensual</div>
             <ul>
+              <li>Hasta 500 alumnos</li>
+              <li>3-8 pistas · 10 coaches</li>
               <li>Todo lo de Starter</li>
-              <li>IA para coaches y CRM</li>
-              <li>Bonos, packs y domiciliación SEPA</li>
-              <li>Multi-coach + reportes</li>
+              <li>CRM con IA</li>
+              <li>Wallet interno</li>
+              <li>Onboarding asistido + Slack 9/7</li>
             </ul>
             <a href="#demo" class="btn btn-primary" style="background: var(--cyan-accent); color: var(--deep);">Probar 30 días</a>
           </article>
           <article class="price-card">
+            <div class="name">Pro</div>
+            <div class="when">Academias grandes</div>
+            <div class="amount">€189</div>
+            <div class="amount-when">/ mes · anual · €252 mensual</div>
+            <ul>
+              <li>Hasta 2.000 alumnos</li>
+              <li>9+ pistas · coaches ilimitados</li>
+              <li>Todo lo de Academy</li>
+              <li>IA avanzada (predicción bajas)</li>
+              <li>2 sedes</li>
+              <li>White-glove onboarding</li>
+            </ul>
+            <a href="#demo" class="btn btn-secondary">Hablar con el equipo</a>
+          </article>
+          <article class="price-card">
             <div class="name">Network</div>
-            <div class="when">Multi-sede y franquicias</div>
+            <div class="when">Multi-sede / franquicias</div>
             <div class="amount">Custom</div>
             <div class="amount-when">precio según necesidades</div>
             <ul>
+              <li>Alumnos ilimitados</li>
               <li>Academias ilimitadas</li>
               <li>SSO + roles custom</li>
               <li>SLA + integraciones a medida</li>
-              <li>Soporte dedicado</li>
+              <li>CSM dedicado</li>
+              <li>Reportes consolidados</li>
             </ul>
             <a href="#demo" class="btn btn-secondary">Hablar con ventas</a>
           </article>
+        </div>
+
+        <!-- Pilot trial CTA -->
+        <div class="pilot-cta">
+          <div class="pilot-copy">
+            <div class="pilot-tag">PILOT</div>
+            <h3>30 días gratis sin tarjeta.</h3>
+            <p>Probar Dashboll en tu academia con todas las funciones del plan Academy. Si no encaja, cancelas y te llevas tus datos en CSV.</p>
+          </div>
+          <a href="mailto:hola@dashboll.app?subject=Empezar%20mi%20Pilot%20Dashboll&body=Hola%2C%20quiero%20empezar%20mi%20Pilot%20de%2030%20d%C3%ADas.%20Os%20cuento%20sobre%20mi%20academia%3A%0A%0A-%20Nombre%3A%0A-%20Deporte%3A%0A-%20N%C3%BAmero%20de%20pistas%3A%0A-%20N%C3%BAmero%20de%20alumnos%3A%0A%0AGracias." class="btn btn-primary" style="background: var(--cyan-accent); color: var(--deep);">Empezar mi Pilot →</a>
+        </div>
+
+        <!-- Tabla comparativa colapsable -->
+        <details class="compare-detail">
+          <summary>Comparar todos los planes en detalle <span class="arrow">→</span></summary>
+          <div class="compare-detail-table">
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Coach</th>
+                  <th>Starter</th>
+                  <th class="highlighted">Academy</th>
+                  <th>Pro</th>
+                  <th>Network</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><th class="cat" colspan="6">Capacidad</th></tr>
+                <tr><th scope="row">Alumnos</th><td>30</td><td>100</td><td class="highlighted">500</td><td>2.000</td><td>Ilimitados</td></tr>
+                <tr><th scope="row">Pistas</th><td>—</td><td>1-2</td><td class="highlighted">3-8</td><td>9+</td><td>Ilimitadas</td></tr>
+                <tr><th scope="row">Coaches</th><td>1</td><td>2</td><td class="highlighted">10</td><td>Ilimitados</td><td>Ilimitados</td></tr>
+                <tr><th scope="row">Sedes</th><td>1</td><td>1</td><td class="highlighted">1</td><td>2</td><td>Ilimitadas</td></tr>
+
+                <tr><th class="cat" colspan="6">Producto</th></tr>
+                <tr><th scope="row">App con tu marca</th><td>—</td><td>●</td><td class="highlighted">●</td><td>●</td><td>●</td></tr>
+                <tr><th scope="row">Agenda + asistencia</th><td>●</td><td>●</td><td class="highlighted">●</td><td>●</td><td>●</td></tr>
+                <tr><th scope="row">Stripe</th><td>●</td><td>●</td><td class="highlighted">●</td><td>●</td><td>●</td></tr>
+                <tr><th scope="row">SEPA + domiciliación</th><td>—</td><td>●</td><td class="highlighted">●</td><td>●</td><td>●</td></tr>
+                <tr><th scope="row">Wallet interno</th><td>—</td><td>—</td><td class="highlighted">●</td><td>●</td><td>●</td></tr>
+                <tr><th scope="row">Bonos y packs</th><td>—</td><td>●</td><td class="highlighted">●</td><td>●</td><td>●</td></tr>
+                <tr><th scope="row">CRM de leads</th><td>—</td><td>Básico</td><td class="highlighted">Con IA</td><td>IA avanzada</td><td>IA avanzada</td></tr>
+                <tr><th scope="row">Comunicación 1:1</th><td>●</td><td>●</td><td class="highlighted">●</td><td>●</td><td>●</td></tr>
+                <tr><th scope="row">Comunicación grupos</th><td>—</td><td>●</td><td class="highlighted">●</td><td>●</td><td>●</td></tr>
+                <tr><th scope="row">Predicción de bajas</th><td>—</td><td>—</td><td class="highlighted">—</td><td>●</td><td>●</td></tr>
+                <tr><th scope="row">API access</th><td>—</td><td>—</td><td class="highlighted">Solo lectura</td><td>Completo</td><td>Completo + webhooks</td></tr>
+                <tr><th scope="row">SSO + roles custom</th><td>—</td><td>—</td><td class="highlighted">—</td><td>—</td><td>●</td></tr>
+
+                <tr><th class="cat" colspan="6">Soporte</th></tr>
+                <tr><th scope="row">Onboarding</th><td>Self-serve</td><td>Self-serve</td><td class="highlighted">Asistido</td><td>White-glove</td><td>Dedicado</td></tr>
+                <tr><th scope="row">Soporte</th><td>Email</td><td>Email</td><td class="highlighted">Slack 9/7</td><td>Slack 24/5</td><td>CSM dedicado</td></tr>
+                <tr><th scope="row">SLA</th><td>—</td><td>—</td><td class="highlighted">—</td><td>99,5%</td><td>99,9%</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+
+        <!-- Add-ons -->
+        <div class="addons">
+          <h3>Add-ons opcionales</h3>
+          <p class="addons-lead">Suben la potencia del plan que tengas. Se contratan y cancelan por separado.</p>
+          <div class="addons-grid">
+            <div class="addon">
+              <div class="addon-name">Migración asistida</div>
+              <div class="addon-price">Gratis Academy+ · €299 Coach/Starter</div>
+              <div class="addon-when">Para academias con +100 alumnos en Excel.</div>
+            </div>
+            <div class="addon">
+              <div class="addon-name">WhatsApp Business</div>
+              <div class="addon-price">+€19 / mes</div>
+              <div class="addon-when">Captura de leads y notificaciones por WhatsApp.</div>
+            </div>
+            <div class="addon">
+              <div class="addon-name">Holded · QuickBooks sync</div>
+              <div class="addon-price">+€29 / mes</div>
+              <div class="addon-when">Asientos contables exportados automáticamente.</div>
+            </div>
+            <div class="addon">
+              <div class="addon-name">Custom training</div>
+              <div class="addon-price">€99 / hora</div>
+              <div class="addon-when">Formación específica para tu equipo.</div>
+            </div>
+            <div class="addon">
+              <div class="addon-name">White-label completo</div>
+              <div class="addon-price">+€200 / mes</div>
+              <div class="addon-when">Federaciones y cadenas que revenden Dashboll bajo su marca.</div>
+            </div>
+            <div class="addon">
+              <div class="addon-name">Setup express · 7 días</div>
+              <div class="addon-price">€499 one-time</div>
+              <div class="addon-when">Migración + go-live en mitad del tiempo estándar.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Refer-a-friend strip -->
+        <div class="refer-strip">
+          <strong>Refer-a-friend:</strong> ¿conoces otra academia? Si firma, 1 mes gratis para ti + 1 mes gratis para ella.
         </div>
       </div>
     </section>
@@ -515,21 +658,10 @@
     <section class="academies" aria-labelledby="academies-title">
       <div class="container">
         <h2 id="academies-title">Academias que usan Dashboll.</h2>
-        <p class="lead">Primer cohort de academias en Q3 2026. Una academia ya en producción real desde Q1 2026 — la pelota de pruebas.</p>
-        <div class="academies-grid">
-          <div class="academy-cell">
-            <div class="name">Academia piloto</div>
-            <div class="meta">EN PRODUCCIÓN · Q1 2026</div>
-          </div>
-          <div class="academy-cell coming">
-            <div class="meta">CUPO RESERVADO<br>Q3 2026</div>
-          </div>
-          <div class="academy-cell coming">
-            <div class="meta">CUPO RESERVADO<br>Q3 2026</div>
-          </div>
-          <div class="academy-cell coming">
-            <div class="meta">¿La tuya?<br>Reserva ahora</div>
-          </div>
+        <div class="logos-row">
+          <a href="https://j3padel.com" target="_blank" rel="noopener" class="academy-logo">
+            <img src="assets/logos/j3padel-footer.svg" alt="J3Padel" class="academy-logo-img" loading="lazy">
+          </a>
         </div>
       </div>
     </section>
@@ -633,7 +765,7 @@
           <ul>
             <li><a href="#producto">Funciones</a></li>
             <li><a href="#multideporte">Multideporte</a></li>
-            <li><a href="#precios">Precios</a></li>
+            <li><a href="#precios">Planes</a></li>
           </ul>
         </div>
         <div>
