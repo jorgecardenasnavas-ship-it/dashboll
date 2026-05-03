@@ -146,8 +146,8 @@
   padding: var(--space-5);
 }
 
-/* Móvil y tablet: layout vertical sin nav lateral */
-@media (max-width: 1180px) {
+/* Móvil y tablet: layout vertical sin nav lateral · solo pantalla, no afecta a PDF */
+@media screen and (max-width: 1180px) {
   .manual-shell {
     grid-template-columns: 1fr;
   }
@@ -208,8 +208,8 @@
   }
 }
 
-/* Móvil pequeño */
-@media (max-width: 480px) {
+/* Móvil pequeño · solo pantalla */
+@media screen and (max-width: 480px) {
   .chapter {
     padding: var(--space-5) var(--space-4);
   }
@@ -221,7 +221,7 @@
   }
 }
 
-/* Print: oculta nav, una sección por página */
+/* Print: cada chapter exactamente una página A4 apaisada */
 @media print {
   body { background: white; }
   .manual-nav { display: none; }
@@ -229,9 +229,26 @@
   .chapter {
     margin: 0;
     box-shadow: none;
-    width: 100%;
-    min-height: auto;
-    padding: var(--page-margin);
+    border-radius: 0;
+    border: none;
+    width: 297mm;
+    height: 210mm;
+    min-height: 210mm;
+    max-height: 210mm;
+    padding: 14mm 18mm;
+    page-break-after: always;
+    page-break-inside: avoid;
+    break-after: page;
+    break-inside: avoid;
+    overflow: hidden;
+  }
+  .chapter:last-child {
+    page-break-after: auto;
+    break-after: auto;
+  }
+  .chapter-header {
+    margin-bottom: var(--space-5);
+    padding-bottom: var(--space-3);
   }
   @page {
     size: A4 landscape;

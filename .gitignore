@@ -1,10 +1,12 @@
 node_modules/
 .DS_Store
 *.log
-pdf/manual.pdf
+pdf/*.pdf
+pdf/inspect/
+pdf/screenshots/
 .vercel/
+.vercel
 .env
 .env.local
 .superpowers/
 
-.vercel
