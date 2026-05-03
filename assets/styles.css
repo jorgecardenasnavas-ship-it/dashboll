@@ -69,3 +69,15 @@ code {
   -webkit-text-fill-color: currentColor;
   color: inherit;
 }
+
+/* Separador cyan brand-native entre palabras del respaldo (Sport ▎ Academy ▎ Manager).
+   Mini-franja vertical en cyan-accent que extrae el 25% del semicírculo dashboard
+   como elemento gráfico. Único Dashboll. Escala con el font-size del padre. */
+.brand-bar {
+  display: inline-block;
+  width: 2px;
+  height: 0.85em;
+  background: var(--cyan-accent);
+  vertical-align: -0.10em;
+  flex-shrink: 0;
+}

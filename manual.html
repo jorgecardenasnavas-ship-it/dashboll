@@ -51,9 +51,9 @@
               <div class="wordmark" style="font-size: 96px;">dashbo<span class="brand-l brand-l-1">l</span><span class="brand-l brand-l-2">l</span></div>
               <div style="position: absolute; bottom: 0; left: 0; right: 0; display: flex; justify-content: space-between; align-items: baseline; padding-left: 8px; padding-right: 3px; font-family: var(--font-mono); font-size: 16px; letter-spacing: 0.10em; text-transform: uppercase; color: rgba(4, 71, 106, 0.55); white-space: nowrap;">
                 <span>Sport</span>
-                <span aria-hidden="true">·</span>
+                <span class="brand-bar" aria-hidden="true"></span>
                 <span>Academy</span>
-                <span aria-hidden="true">·</span>
+                <span class="brand-bar" aria-hidden="true"></span>
                 <span>Manager</span>
               </div>
             </div>
@@ -317,7 +317,7 @@
           </div>
           <div class="card" style="margin-top: var(--space-7);">
             <span class="label">REGLA DE PROTECCIÓN · ISOTIPO</span>
-            <p style="margin-top: var(--space-2);">Mantener un espacio libre alrededor del isotipo igual al <strong>25% de su tamaño</strong>. <strong>Tamaño mínimo: 48px</strong> — por debajo, el dashboard semicircular y el patrón distintivo del deporte se difuminan y pierden legibilidad. Para escalas micro (favicon, badge, notificación) usar versión simplificada (Cap 14 · 09 · simplificado micro).</p>
+            <p style="margin-top: var(--space-2);">Mantener un espacio libre alrededor del isotipo igual al <strong>25% de su tamaño</strong>. <strong>Tamaño mínimo: 48px</strong> — por debajo, el dashboard semicircular y el patrón distintivo del deporte se difuminan y pierden legibilidad. Excepciones permitidas a 24-32px: favicon, app icon, badge de notificación, avatar de redes, iconos in-product (UI assistant). Documentadas en Cap 14 · 09 · simplificado micro.</p>
           </div>
 
           <h2 style="margin-top: var(--space-9);">Área de protección del lockup</h2>
@@ -325,8 +325,8 @@
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); margin-top: var(--space-6);">
             <div style="padding: var(--space-7); background: var(--foam); border-radius: 10px; border: 2px dashed rgba(26,143,199,0.35); position: relative;">
               <div style="position: absolute; top: var(--space-3); left: var(--space-3); font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.10em; color: var(--brew-blue);">X · CAP-HEIGHT</div>
-              <div style="display: flex; align-items: center; justify-content: center; gap: var(--space-1); height: 110px;">
-                <dashboll-ball size="56"></dashboll-ball>
+              <div style="display: flex; align-items: center; justify-content: center; gap: var(--space-1); height: 130px;">
+                <dashboll-ball size="88"></dashboll-ball>
                 <div class="wordmark" style="font-size: 32px;">dashbo<span class="brand-l brand-l-1">l</span><span class="brand-l brand-l-2">l</span></div>
               </div>
               <p style="font-size: 11px; color: #6b7280; margin-top: var(--space-3); text-align: center;">El borde discontinuo cyan marca el aire mínimo: una <strong>cap-height (X)</strong> alrededor de la composición. Nada entra ahí.</p>
@@ -729,7 +729,7 @@
                     <div style="display: flex; flex-direction: column; gap: 0;">
                       <div class="wordmark" style="font-size: 30px; margin-top: -6px;">dashbo<span class="brand-l brand-l-1">l</span><span class="brand-l brand-l-2">l</span></div>
                       <div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: -2px; padding-left: 2px; padding-right: 1px; font-family: var(--font-mono); font-size: 7.5px; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(4, 71, 106, 0.55); white-space: nowrap;">
-                        <span>Sport</span><span aria-hidden="true">·</span><span>Academy</span><span aria-hidden="true">·</span><span>Manager</span>
+                        <span>Sport</span><span class="brand-bar" aria-hidden="true"></span><span>Academy</span><span class="brand-bar" aria-hidden="true"></span><span>Manager</span>
                       </div>
                     </div>
                   </div>
@@ -759,14 +759,14 @@
                   <div class="wordmark" style="font-size: 36px;">dashbo<span class="brand-l brand-l-1">l</span><span class="brand-l brand-l-2">l</span></div>
                   <div style="position: absolute; top: 100%; left: 0; right: 0; margin-top: -2px; display: flex; justify-content: space-between; align-items: baseline; padding-left: 3px; padding-right: 1px; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(4, 71, 106, 0.55); white-space: nowrap;">
                     <span>Sport</span>
-                    <span aria-hidden="true">·</span>
+                    <span class="brand-bar" aria-hidden="true"></span>
                     <span>Academy</span>
-                    <span aria-hidden="true">·</span>
+                    <span class="brand-bar" aria-hidden="true"></span>
                     <span>Manager</span>
                   </div>
                 </div>
               </div>
-              <p style="font-size: 11px; color: #6b7280; margin-top: var(--space-3);">Descriptor con ancho del wordmark, alineado ópticamente al visible de "dashboll" (padding-left 3px compensa el left side bearing del glyph "d"). Mono 9px, letter-spacing 0.08em, color deep al 55%. Iso anclado al centro óptico del bloque wordmark+descriptor. Para firmas de email, papelería, footers institucionales.</p>
+              <p style="font-size: 11px; color: #6b7280; margin-top: var(--space-3);">Descriptor con ancho del wordmark, alineado ópticamente al visible de "dashboll" (padding-left 3px compensa el left side bearing del glyph "d"). Mono 9px, letter-spacing 0.08em, color deep al 55%. <strong>El iso se ancla al wordmark</strong>, no al bloque wordmark+descriptor — el descriptor cuelga debajo via position absolute sin afectar la alineación. Para firmas de email, papelería, footers institucionales.</p>
             </div>
 
             <!-- 11 · Respaldo vertical -->
@@ -778,14 +778,14 @@
                   <div class="wordmark" style="font-size: 36px; margin-top: -10px;">dashbo<span class="brand-l brand-l-1">l</span><span class="brand-l brand-l-2">l</span></div>
                   <div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 6px; padding-left: 3px; padding-right: 1px; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(4, 71, 106, 0.55); white-space: nowrap;">
                     <span>Sport</span>
-                    <span aria-hidden="true">·</span>
+                    <span class="brand-bar" aria-hidden="true"></span>
                     <span>Academy</span>
-                    <span aria-hidden="true">·</span>
+                    <span class="brand-bar" aria-hidden="true"></span>
                     <span>Manager</span>
                   </div>
                 </div>
               </div>
-              <p style="font-size: 11px; color: #6b7280; margin-top: var(--space-3);">Versión vertical con respaldo. El wordmark se sube a 36px (vs 22px del lockup vertical base) para que el descriptor encaje al mismo ancho. Iso a 80px para mantener la proporción visual de versión vertical. Para covers, hero sections, intros centradas.</p>
+              <p style="font-size: 11px; color: #6b7280; margin-top: var(--space-3);">Versión vertical con respaldo. El wordmark se sube a 36px (vs 22px del lockup vertical base) para que el descriptor encaje al mismo ancho. Iso a 112px para anclar la composición con peso visual. Para covers, hero sections, intros centradas.</p>
             </div>
 
             <!-- 09 · Simplificado micro (excepción: favicon, badge, notificación) -->
@@ -796,7 +796,7 @@
                 <dashboll-ball size="32"></dashboll-ball>
                 <dashboll-ball size="48"></dashboll-ball>
               </div>
-              <p style="font-size: 11px; color: #6b7280; margin-top: var(--space-3);"><strong>Excepción al mínimo de 48px</strong> — solo permitida en favicon, app icon, badge de notificación o avatar de redes. A esta escala el patrón distintivo del deporte se difumina (es correcto): solo pelota + semicírculo.</p>
+              <p style="font-size: 11px; color: #6b7280; margin-top: var(--space-3);">A 48px (mínimo oficial) el patrón ya se simplifica visualmente. <strong>A 24-32px (excepción al mínimo)</strong> — solo permitida en favicon, app icon, badge de notificación, avatar de redes o iconos in-product (UI assistant). El patrón distintivo del deporte se difumina por completo: solo pelota + semicírculo.</p>
             </div>
 
           </div>
@@ -876,9 +876,9 @@
             <div class="wordmark" style="font-size: 64px;">dashbo<span class="brand-l brand-l-1">l</span><span class="brand-l brand-l-2">l</span></div>
             <div style="position: absolute; bottom: 0; left: 0; right: 0; display: flex; justify-content: space-between; align-items: baseline; padding-left: 5px; padding-right: 2px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.10em; text-transform: uppercase; color: rgba(4, 71, 106, 0.55); white-space: nowrap;">
               <span>Sport</span>
-              <span aria-hidden="true">·</span>
+              <span class="brand-bar" aria-hidden="true"></span>
               <span>Academy</span>
-              <span aria-hidden="true">·</span>
+              <span class="brand-bar" aria-hidden="true"></span>
               <span>Manager</span>
             </div>
           </div>

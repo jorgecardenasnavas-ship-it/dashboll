@@ -82,17 +82,17 @@ class DashbollBall extends HTMLElement {
 
     let trackStroke, trackOpacity, barMain, barAccent, ballFill, patternColor;
     if (tone === 'black') {
-      trackStroke = BLACK; trackOpacity = 0.18;
+      trackStroke = BLACK; trackOpacity = 0.13;
       barMain = BLACK; barAccent = BLACK;
       ballFill = BLACK;
       patternColor = WHITE;
     } else if (tone === 'white') {
-      trackStroke = WHITE; trackOpacity = 0.30;
+      trackStroke = WHITE; trackOpacity = 0.22;
       barMain = WHITE; barAccent = WHITE;
       ballFill = WHITE;
       patternColor = BLACK;
     } else {
-      trackStroke = DEEP; trackOpacity = 0.15;
+      trackStroke = DEEP; trackOpacity = 0.10;
       barMain = BREW_BLUE; barAccent = CYAN;
       ballFill = BREW_BLUE;
       patternColor = WHITE;
@@ -108,12 +108,12 @@ class DashbollBall extends HTMLElement {
   </defs>
   <!-- Semicírculo de cumplimiento (75% brew + 25% cyan), radio 30, centrado en (40,52). Perímetro = π × 30 = 94.25 -->
   <path data-role="ring-track" d="M 10,52 A 30,30 0 0 1 70,52"
-        stroke="${trackStroke}" stroke-width="6" stroke-linecap="round" fill="none" opacity="${trackOpacity}"/>
+        stroke="${trackStroke}" stroke-width="5" stroke-linecap="round" fill="none" opacity="${trackOpacity}"/>
   <path data-role="dashboard-bar" d="M 10,52 A 30,30 0 0 1 70,52"
-        stroke="${barMain}" stroke-width="6" stroke-linecap="round" fill="none"
+        stroke="${barMain}" stroke-width="5" stroke-linecap="round" fill="none"
         stroke-dasharray="70.69 94.25"/>
   <path data-role="dashboard-bar" d="M 10,52 A 30,30 0 0 1 70,52"
-        stroke="${barAccent}" stroke-width="6" stroke-linecap="round" fill="none"
+        stroke="${barAccent}" stroke-width="5" stroke-linecap="round" fill="none"
         stroke-dasharray="23.56 94.25" stroke-dashoffset="-70.69" opacity="${accentOpacity}"/>
   <!-- Pelota base maciza -->
   <circle data-role="ball-base" cx="40" cy="52" r="24" fill="${ballFill}"/>
