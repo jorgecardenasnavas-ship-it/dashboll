@@ -221,7 +221,7 @@
   }
 }
 
-/* Print: cada chapter exactamente una página A4 apaisada */
+/* Print: chapters fluyen sin recortar contenido */
 @media print {
   body { background: white; }
   .manual-nav { display: none; }
@@ -232,31 +232,34 @@
     border-radius: 0;
     border: none;
     width: 297mm;
-    height: 210mm;
     min-height: 210mm;
-    max-height: 210mm;
+    height: auto;
+    max-height: none;
     padding: 14mm 18mm;
     page-break-after: always;
-    page-break-inside: avoid;
     break-after: page;
-    break-inside: avoid;
-    overflow: hidden;
+    /* CRÍTICO: permitir que el contenido fluya a múltiples páginas si no cabe en una.
+       Antes max-height: 210mm + overflow: hidden recortaba el contenido de chapters
+       densos (Cap 06 anti-patterns 6 cards, Cap 07 construcción + área protección,
+       Cap 08 skins 7+1, Cap 13 mockups 3+2, Cap 14 variantes 12 cards). */
+    overflow: visible;
+    break-inside: auto;
+    page-break-inside: auto;
   }
   .chapter:last-child {
     page-break-after: auto;
     break-after: auto;
   }
-  /* Cap 14 (variantes) tiene 12 cards: necesita multi-página para no recortar */
-  #cap-14 {
-    max-height: none;
-    height: auto;
-    overflow: visible;
-    break-inside: auto;
-    page-break-inside: auto;
-  }
   .chapter-header {
     margin-bottom: var(--space-5);
     padding-bottom: var(--space-3);
+  }
+  /* Evitar que cards individuales se rompan a la mitad */
+  .card,
+  .chapter-content > div > div,
+  article {
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
   @page {
     size: A4 landscape;
