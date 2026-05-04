@@ -246,6 +246,14 @@
     page-break-after: auto;
     break-after: auto;
   }
+  /* Cap 14 (variantes) tiene 12 cards: necesita multi-página para no recortar */
+  #cap-14 {
+    max-height: none;
+    height: auto;
+    overflow: visible;
+    break-inside: auto;
+    page-break-inside: auto;
+  }
   .chapter-header {
     margin-bottom: var(--space-5);
     padding-bottom: var(--space-3);

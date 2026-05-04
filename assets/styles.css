@@ -85,7 +85,7 @@ code {
 /* Print fallback: Chrome renderiza incorrectamente background-clip:text + linear-gradient
    en PDF print (los gradient stops se proyectan como rectángulos fuera de la silueta del
    texto). En print, anulamos el gradient y mostramos las "ll" en sólido currentColor.
-   Para mantener el acento cyan, añadimos un overline cyan sobre las "ll". */
+   El acento cyan en pantalla es brand pero el PDF imprime limpio sin el efecto. */
 @media print {
   .brand-l {
     background-image: none;
@@ -93,9 +93,5 @@ code {
     background-clip: initial;
     -webkit-text-fill-color: currentColor;
     color: inherit;
-    text-decoration: overline;
-    text-decoration-color: var(--cyan-tone, var(--cyan-accent));
-    text-decoration-thickness: 0.08em;
-    text-underline-offset: 0;
   }
 }
