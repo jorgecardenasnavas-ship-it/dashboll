@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Bloquear ficheros que no aportan a búsqueda
+Disallow: /pdf/inspect/
+Disallow: /pdf/web-screenshots/
+Disallow: /pdf/screenshots/
+
+# Sitemap
+Sitemap: https://dashboll.vercel.app/sitemap.xml
