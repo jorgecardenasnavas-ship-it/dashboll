@@ -128,10 +128,25 @@ section.compact { padding: var(--space-7) 0; }
   background: var(--cyan-accent);
 }
 .hero h1 {
+  margin-bottom: var(--space-5);
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+.hero h1 .hero-h1-kw {
+  display: block;
+  font-size: var(--text-md);
+  font-weight: 600;
+  color: var(--brew-blue);
+  letter-spacing: 0;
+  line-height: 1.3;
+  margin-bottom: var(--space-3);
+  text-transform: none;
+}
+.hero h1 .hero-h1-tag {
+  display: block;
   font-size: clamp(40px, 5vw, 72px);
   letter-spacing: -0.04em;
   line-height: 1;
-  margin-bottom: var(--space-5);
 }
 .hero .sub {
   font-size: var(--text-md);
