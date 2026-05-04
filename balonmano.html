@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Software de gestión para academias de pádel | Dashboll</title>
-  <meta name="description" content="Software para academias de pádel: agenda de pistas, cobro de cuotas, americano, cuadros, niveles, comunicación con alumnos y app móvil. Multideporte. Sin Excel, sin WhatsApp suelto.">
+  <title>Software de gestión para clubes de balonmano | Dashboll</title>
+  <meta name="description" content="Software para clubes y escuelas de balonmano: equipos por categoría, fichas, asistencia, partidos y ligas, cobro de cuotas, comunicación con padres y app móvil. Multideporte.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://dashboll.vercel.app/padel">
-  <meta property="og:title" content="Software de gestión para academias de pádel | Dashboll">
-  <meta property="og:description" content="Agenda, cuotas, comunicación y app móvil — pensado para academias de pádel. Multideporte.">
+  <link rel="canonical" href="https://dashboll.vercel.app/balonmano">
+  <meta property="og:title" content="Software de gestión para clubes de balonmano | Dashboll">
+  <meta property="og:description" content="Software para clubes y escuelas de balonmano: equipos por categoría, fichas, asistencia, partidos y ligas, cobro de cuotas, comunicación con padres y app móvil. Multideporte.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_ES">
-  <meta property="og:url" content="https://dashboll.vercel.app/padel">
+  <meta property="og:url" content="https://dashboll.vercel.app/balonmano">
   <link rel="stylesheet" href="assets/tokens.css?v=20260504">
   <link rel="stylesheet" href="assets/styles.css?v=20260504">
   <link rel="stylesheet" href="assets/web.css?v=20260504">
@@ -20,10 +20,10 @@
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "Dashboll · Pádel",
+    "name": "Dashboll · Balonmano",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Web, iOS, Android",
-    "description": "Software de gestión específico para academias de pádel: pistas, americanos, cuadros, niveles y comunicación.",
+    "description": "Software para clubes y escuelas de balonmano: equipos por categoría, fichas, asistencia, partidos y ligas, cobro de cuotas, comunicación con padres y app móvil. Multideporte.",
     "offers": {
       "@type": "Offer",
       "price": "44",
@@ -37,7 +37,7 @@
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Dashboll", "item": "https://dashboll.vercel.app/" },
-      { "@type": "ListItem", "position": 2, "name": "Software para academias de pádel", "item": "https://dashboll.vercel.app/padel" }
+      { "@type": "ListItem", "position": 2, "name": "Software de gestión para clubes de balonmano", "item": "https://dashboll.vercel.app/balonmano" }
     ]
   }
   </script>
@@ -62,23 +62,22 @@
 
   <main>
 
-    <!-- HERO PÁDEL -->
     <section class="hero" id="hero" aria-labelledby="hero-title">
       <div class="container">
         <div class="hero-grid">
           <div>
             <span class="hero-eyebrow">
               <span class="dot"></span>
-              Pádel · Multideporte · IA en cada flujo
+              Balonmano · Multideporte · IA en cada flujo
             </span>
             <h1 id="hero-title">
-              <span class="hero-h1-kw">Software de gestión para academias de pádel</span>
+              <span class="hero-h1-kw">Software de gestión para clubes de balonmano</span>
               <span class="hero-h1-tag">La pelota está en tu panel.</span>
             </h1>
-            <p class="sub">Reserva de pistas, <strong>americano y cuadros</strong>, control de niveles, cobro de cuotas, comunicación con padres y alumnos, y app móvil. Todo desde un único panel — diseñado para clubes y academias de pádel que crecen.</p>
+            <p class="sub">Gestiona equipos por edad, control de asistencia, partidos y ligas, cobro de cuotas a las familias, comunicación con padres y app móvil. Para clubes y escuelas de balonmano.</p>
             <div class="hero-ctas">
               <a href="/#demo" class="btn btn-primary">Reservar demo</a>
-              <a href="#funciones-padel" class="btn btn-secondary">Ver funciones de pádel</a>
+              <a href="#funciones" class="btn btn-secondary">Ver funciones de balonmano</a>
             </div>
             <div class="hero-trust">
               <span>Sin tarjeta</span>
@@ -88,98 +87,95 @@
           </div>
           <div class="hero-balls">
             <div class="main">
-              <dashboll-ball sport="padel" size="380"></dashboll-ball>
+              <dashboll-ball sport="handball" size="380"></dashboll-ball>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PROBLEMAS DE UNA ACADEMIA DE PÁDEL -->
     <section class="resuelve" id="problemas" aria-labelledby="prob-title" style="padding: var(--space-9) 0;">
       <div class="container">
-        <h2 id="prob-title">Tres problemas que viven cada semana las academias de pádel.</h2>
-        <p class="lead">Excel, WhatsApp y tablero magnético. Tres herramientas para gestionar lo mismo, ninguna conectada.</p>
+        <h2 id="prob-title">Tres problemas que viven cada semana las academias de balonmano.</h2>
+        <p class="lead">Excel, WhatsApp y libreta. Tres herramientas para gestionar lo mismo, ninguna conectada.</p>
         <div class="problems-grid" style="margin-top: var(--space-7); display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-5);">
           <article class="problem-card">
             <span class="label">PROBLEMA 01</span>
-            <h3>Pistas vacías que nadie cubre.</h3>
-            <p>Una baja a las 17:30 deja la pista vacía a las 18:00. Nadie sabe que está libre y se pierde la facturación de esa hora.</p>
+            <h3>Asistencia y posiciones a mano.</h3>
+            <p>Cada coach apunta asistencia y posiciones en una libreta. Al final del trimestre, los datos están dispersos y nadie tiene la foto del equipo.</p>
             <div class="says">
               <dashboll-ball size="32"></dashboll-ball>
-              <strong>Dashboll:</strong> Detecto el hueco y propongo 4 jugadores que encajan por nivel, horario y disponibilidad. Tú confirmas.
+              <strong>Dashboll:</strong> Asistencia automática por entrenamiento, ficha de posición por jugador, evolución mensual visible en panel y app.
             </div>
           </article>
           <article class="problem-card">
             <span class="label">PROBLEMA 02</span>
-            <h3>Americanos y cuadros a mano.</h3>
-            <p>Cada semana toca cuadrar parejas, niveles, pistas y horarios en una hoja de Excel. Una hora antes del torneo, alguien cancela y se rompe todo.</p>
+            <h3>Fichas federativas y licencias.</h3>
+            <p>Renovar licencias de 100+ jugadores cada temporada con DNI, foto, autorización médica y firma del padre — un mes de papeleo.</p>
             <div class="says">
               <dashboll-ball size="32"></dashboll-ball>
-              <strong>Dashboll:</strong> Genero el cuadro y el americano automáticamente con los inscritos. Reorganizo en 1 clic si alguien cancela.
+              <strong>Dashboll:</strong> Ficha digital con DNI, foto, autorización y firma. Renovación masiva. Exportación al formato de la federación.
             </div>
           </article>
           <article class="problem-card">
             <span class="label">PROBLEMA 03</span>
-            <h3>Morosidad que no para de crecer.</h3>
-            <p>Cuotas a final de mes, recordatorios manuales, perseguir alumnos por WhatsApp. La cuenta del banco no cuadra con la lista de inscritos.</p>
+            <h3>Cuotas y extras descuadrados.</h3>
+            <p>Cuota mensual + equipación + viajes a torneos. Padres que pagan a destiempo, transferencias sin concepto, conciliación imposible.</p>
             <div class="says">
               <dashboll-ball size="32"></dashboll-ball>
-              <strong>Dashboll:</strong> Domiciliación SEPA + wallet interno. Morosidad cae al 4-6% sin perseguir a nadie.
+              <strong>Dashboll:</strong> Cuotas + extras por separado en wallet familiar. SEPA mensual. Conciliación automática por concepto.
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- FUNCIONES ESPECÍFICAS DE PÁDEL -->
-    <section class="decide" id="funciones-padel" aria-labelledby="func-title" style="padding: var(--space-9) 0; background: var(--foam);">
+    <section class="decide" id="funciones" aria-labelledby="func-title" style="padding: var(--space-9) 0; background: var(--foam);">
       <div class="container">
-        <h2 id="func-title">Funciones pensadas para clubes y academias de <strong>pádel</strong>.</h2>
+        <h2 id="func-title">Funciones pensadas para clubes y academias de <strong>balonmano</strong>.</h2>
         <p class="lead">Todo lo que pides al final del mes — pero ya hecho.</p>
         <div class="features-grid" style="margin-top: var(--space-7); display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-5);">
           <div class="feature-card" style="background: white; padding: var(--space-6); border-radius: 12px; border: 1px solid #e5e7eb;">
-            <h3>Reserva inteligente de pistas</h3>
-            <p>Ocupación en tiempo real, alertas de huecos, propuesta automática de jugadores con nivel compatible.</p>
+            <h3>Equipos por categoría</h3>
+            <p>Mini, infantil, cadete, juvenil, sénior. Cada equipo con su entrenador, su pista y su calendario propio.</p>
           </div>
           <div class="feature-card" style="background: white; padding: var(--space-6); border-radius: 12px; border: 1px solid #e5e7eb;">
-            <h3>Americano y cuadros automáticos</h3>
-            <p>Genera americanos, cuadros eliminatorios y sistemas suizos con un clic. Reorganización en vivo si alguien cancela.</p>
+            <h3>Fichas federativas digitales</h3>
+            <p>DNI, foto, autorización médica, firma del padre. Renovación masiva. Exportación al formato de la RFEBM o tu federación territorial.</p>
           </div>
           <div class="feature-card" style="background: white; padding: var(--space-6); border-radius: 12px; border: 1px solid #e5e7eb;">
-            <h3>Sistema de niveles + ranking interno</h3>
-            <p>Niveles por jugador, evolución mes a mes, ranking de academia. Los alumnos ven su progreso desde la app.</p>
+            <h3>Asistencia por entrenamiento y partido</h3>
+            <p>Marca asistencia desde el panel o el móvil. Faltas, retrasos y justificantes accesibles para padres y coordinador.</p>
           </div>
           <div class="feature-card" style="background: white; padding: var(--space-6); border-radius: 12px; border: 1px solid #e5e7eb;">
-            <h3>Cobros automáticos · SEPA + Stripe</h3>
-            <p>Domiciliación SEPA para cuotas mensuales. Stripe para clases sueltas y bonos. Wallet interno para los créditos.</p>
+            <h3>Cobros automáticos · SEPA + wallet familiar</h3>
+            <p>Cuota mensual o trimestral por SEPA. Wallet familiar para hermanos. Extras (equipación, torneos) cobrados aparte sin mezclar.</p>
           </div>
           <div class="feature-card" style="background: white; padding: var(--space-6); border-radius: 12px; border: 1px solid #e5e7eb;">
-            <h3>Comunicación · WhatsApp + push + email</h3>
-            <p>Mensajes a padres y alumnos desde un solo sitio. Confirmaciones, cancelaciones y recordatorios automáticos.</p>
+            <h3>Ligas internas + competiciones externas</h3>
+            <p>Calendario de liga interna por categoría. Sincroniza partidos federativos. Resultados, clasificación y MVP en automático.</p>
           </div>
           <div class="feature-card" style="background: white; padding: var(--space-6); border-radius: 12px; border: 1px solid #e5e7eb;">
-            <h3>App iOS + Android para alumnos</h3>
-            <p>Reservar pista, apuntarse a americano, ver historial, pagar bono. Tu marca, tu app — tus alumnos no salen del ecosistema.</p>
+            <h3>App iOS + Android</h3>
+            <p>Padres y jugadores ven calendario, asistencia, pagos, resultados. Tu marca, tu app, sin coste adicional.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- WIDGETS / VISTAS POR ROL -->
     <section class="resuelve" id="roles" aria-labelledby="roles-title" style="padding: var(--space-9) 0;">
       <div class="container">
-        <h2 id="roles-title">Una academia de pádel. Tres roles. Un solo panel.</h2>
+        <h2 id="roles-title">Una academia de balonmano. Tres roles. Un solo panel.</h2>
         <p class="lead">Cada perfil ve lo que necesita ver. El head coach manda. El entrenador ejecuta. El jugador reserva.</p>
         <div class="roles-grid" style="margin-top: var(--space-7); display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4);">
           <div style="background: var(--deep); border-radius: 12px; padding: var(--space-5); color: white;">
             <span class="label" style="color: var(--cyan-accent);">VISTA · HEAD COACH</span>
-            <h3 style="color: white; margin-top: var(--space-2); font-size: var(--text-md);">Ocupación · Hoy</h3>
+            <h3 style="color: white; margin-top: var(--space-2); font-size: var(--text-md);">Entrenamientos · Hoy</h3>
             <div class="mono" style="margin-top: var(--space-3); display: flex; flex-direction: column; gap: 4px; font-size: 11px;">
-              <div>09:00 · pista 1 · <span style="color: var(--cyan-accent);">100%</span></div>
-              <div>10:30 · pista 1 · <span style="color: var(--cyan-accent);">100%</span></div>
-              <div>18:00 · pista 1 · <span style="color: #fbbf24;">050%</span></div>
-              <div>19:30 · pista 1 · <span style="color: var(--cyan-accent);">100%</span></div>
+              <div>09:00 · 100%</div>
+              <div>10:30 · 100%</div>
+              <div>18:00 · <span style="color: #fbbf24;">050%</span></div>
+              <div>19:30 · 100%</div>
             </div>
             <div style="margin-top: var(--space-4); padding-top: var(--space-3); border-top: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; gap: var(--space-2);">
               <dashboll-ball size="32"></dashboll-ball>
@@ -188,14 +184,14 @@
           </div>
           <div style="background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: var(--space-5);">
             <span class="label">VISTA · ENTRENADOR</span>
-            <h3 style="margin-top: var(--space-2); font-size: var(--text-md);">Mañana · Iniciación</h3>
+            <h3 style="margin-top: var(--space-2); font-size: var(--text-md);">Mañana</h3>
             <div style="margin-top: var(--space-3); display: flex; flex-direction: column; gap: 4px; font-size: 11px;">
               <div style="padding: 6px 8px; background: var(--foam); border-radius: 4px;">
-                <strong>10:00 · pista 2</strong><br>
+                <strong>10:00</strong><br>
                 <span style="color: #6b7280; font-size: 10px;">Carla, Miguel, Sofía, Iván</span>
               </div>
               <div style="padding: 6px 8px; background: var(--foam); border-radius: 4px;">
-                <strong>12:00 · pista 1</strong><br>
+                <strong>12:00</strong><br>
                 <span style="color: #6b7280; font-size: 10px;">3 alumnos · 1 falta</span>
               </div>
             </div>
@@ -206,10 +202,10 @@
           </div>
           <div style="background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: var(--space-5);">
             <span class="label">VISTA · JUGADOR</span>
-            <h3 style="margin-top: var(--space-2); font-size: var(--text-md);">Tu próxima clase</h3>
+            <h3 style="margin-top: var(--space-2); font-size: var(--text-md);">Tu próximo partido</h3>
             <div style="margin-top: var(--space-3); padding: var(--space-3); background: var(--foam); border-radius: 6px;">
               <div class="mono" style="font-size: 10px; color: var(--brew-blue); letter-spacing: 0.10em;">JUEVES 04 · 19:30</div>
-              <div style="margin-top: 2px; font-weight: 700; font-size: 13px;">Iniciación · pista 3</div>
+              <div style="margin-top: 2px; font-weight: 700; font-size: 13px;">Cadete · pabellón A</div>
               <div style="font-size: 11px; color: #6b7280;">Eduardo M. · 4 jugadores</div>
             </div>
             <div style="margin-top: var(--space-4); display: flex; align-items: center; gap: var(--space-2);">
@@ -221,30 +217,29 @@
       </div>
     </section>
 
-    <!-- FAQ específico pádel -->
-    <section class="faq" id="faq-padel" aria-labelledby="faq-title" style="padding: var(--space-9) 0; background: var(--foam);">
+    <section class="faq" id="faq" aria-labelledby="faq-title" style="padding: var(--space-9) 0; background: var(--foam);">
       <div class="container">
-        <h2 id="faq-title">Preguntas frecuentes de academias de pádel</h2>
+        <h2 id="faq-title">Preguntas frecuentes de academias de balonmano</h2>
         <div class="faq-list" style="margin-top: var(--space-7); max-width: 80ch;">
           <details class="faq-item" style="border-bottom: 1px solid #e5e7eb; padding: var(--space-4) 0;">
-            <summary style="cursor: pointer; font-weight: 700; font-size: var(--text-md);">¿Soporta americano, cuadros y sistema suizo?</summary>
-            <p style="margin-top: var(--space-3); color: #4b5563;">Sí. Generamos americano, cuadro eliminatorio y sistema suizo con los inscritos. Si alguien cancela 30 minutos antes, reorganizamos sin que tengas que tocar nada.</p>
+            <summary style="cursor: pointer; font-weight: 700; font-size: var(--text-md);">¿Soporta todas las categorías de balonmano base y sénior?</summary>
+            <p style="margin-top: var(--space-3); color: #4b5563;">Sí. Desde mini hasta sénior, masculino y femenino. Cada equipo con su categoría federativa, calendario y cuota.</p>
           </details>
           <details class="faq-item" style="border-bottom: 1px solid #e5e7eb; padding: var(--space-4) 0;">
-            <summary style="cursor: pointer; font-weight: 700; font-size: var(--text-md);">¿Puedo migrar mis datos desde Excel o desde otro software?</summary>
-            <p style="margin-top: var(--space-3); color: #4b5563;">Sí. Importamos alumnos, cuotas, asistencia e historial desde Excel, Resasports, Playtomic y la mayoría de gestores. El onboarding completo dura 14 días.</p>
+            <summary style="cursor: pointer; font-weight: 700; font-size: var(--text-md);">¿Genera fichas federativas en el formato de la RFEBM?</summary>
+            <p style="margin-top: var(--space-3); color: #4b5563;">Sí. Exportamos al formato de la RFEBM y las principales federaciones territoriales. Si la tuya no está soportada, la añadimos en el onboarding.</p>
           </details>
           <details class="faq-item" style="border-bottom: 1px solid #e5e7eb; padding: var(--space-4) 0;">
-            <summary style="cursor: pointer; font-weight: 700; font-size: var(--text-md);">¿Funciona si gestiono pádel y otro deporte (tenis, pickleball)?</summary>
-            <p style="margin-top: var(--space-3); color: #4b5563;">Sí. Dashboll es multideporte por diseño. Una sola academia puede tener pistas de pádel, tenis y pickleball y gestionarlas desde un único panel — los alumnos pueden inscribirse en clases de cualquier deporte con la misma cuenta.</p>
+            <summary style="cursor: pointer; font-weight: 700; font-size: var(--text-md);">¿Cómo se gestionan los pagos extra (equipación, torneos)?</summary>
+            <p style="margin-top: var(--space-3); color: #4b5563;">En wallet familiar separado de la cuota base. Padres ven cada cargo con su concepto. Tú concilias automáticamente por categoría.</p>
           </details>
           <details class="faq-item" style="border-bottom: 1px solid #e5e7eb; padding: var(--space-4) 0;">
-            <summary style="cursor: pointer; font-weight: 700; font-size: var(--text-md);">¿Cuánto tarda en reducirse la morosidad?</summary>
-            <p style="margin-top: var(--space-3); color: #4b5563;">En las academias que operan con domiciliación SEPA + wallet interno, la morosidad típicamente baja al 4-6% en los primeros 3 meses. Mucho más bajo que el 15-20% habitual cuando se cobra a mano.</p>
+            <summary style="cursor: pointer; font-weight: 700; font-size: var(--text-md);">¿Funciona si gestiono balonmano y otro deporte?</summary>
+            <p style="margin-top: var(--space-3); color: #4b5563;">Sí. Clubes polideportivos con secciones de balonmano, fútbol o baloncesto gestionan todo desde un único panel.</p>
           </details>
           <details class="faq-item" style="border-bottom: 1px solid #e5e7eb; padding: var(--space-4) 0;">
             <summary style="cursor: pointer; font-weight: 700; font-size: var(--text-md);">¿Necesito instalar algo o me da una app?</summary>
-            <p style="margin-top: var(--space-3); color: #4b5563;">No instalas nada. El panel es web (funciona en cualquier navegador). Para tus alumnos hay una app iOS + Android lista, con tu marca, sin coste adicional.</p>
+            <p style="margin-top: var(--space-3); color: #4b5563;">No instalas nada. El panel es web. Para padres y jugadores hay una app iOS + Android con tu marca, sin coste adicional.</p>
           </details>
         </div>
       </div>
@@ -255,18 +250,18 @@
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
-        { "@type": "Question", "name": "¿Soporta americano, cuadros y sistema suizo?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Generamos americano, cuadro eliminatorio y sistema suizo con los inscritos. Si alguien cancela 30 minutos antes, reorganizamos sin que tengas que tocar nada." } },
-        { "@type": "Question", "name": "¿Puedo migrar mis datos desde Excel o desde otro software?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Importamos alumnos, cuotas, asistencia e historial desde Excel, Resasports, Playtomic y la mayoría de gestores. El onboarding completo dura 14 días." } },
-        { "@type": "Question", "name": "¿Funciona si gestiono pádel y otro deporte?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Dashboll es multideporte por diseño. Una sola academia puede tener pistas de pádel, tenis y pickleball y gestionarlas desde un único panel." } },
-        { "@type": "Question", "name": "¿Cuánto tarda en reducirse la morosidad?", "acceptedAnswer": { "@type": "Answer", "text": "En las academias que operan con domiciliación SEPA + wallet interno, la morosidad típicamente baja al 4-6% en los primeros 3 meses." } }
+        { "@type": "Question", "name": "¿Soporta todas las categorías de balonmano base y sénior?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Desde mini hasta sénior, masculino y femenino. Cada equipo con su categoría federativa, calendario y cuota." } },
+        { "@type": "Question", "name": "¿Genera fichas federativas en el formato de la RFEBM?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Exportamos al formato de la RFEBM y las principales federaciones territoriales. Si la tuya no está soportada, la añadimos en el onboarding." } },
+        { "@type": "Question", "name": "¿Cómo se gestionan los pagos extra (equipación, torneos)?", "acceptedAnswer": { "@type": "Answer", "text": "En wallet familiar separado de la cuota base. Padres ven cada cargo con su concepto. Tú concilias automáticamente por categoría." } },
+        { "@type": "Question", "name": "¿Funciona si gestiono balonmano y otro deporte?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Clubes polideportivos con secciones de balonmano, fútbol o baloncesto gestionan todo desde un único panel." } },
+        { "@type": "Question", "name": "¿Necesito instalar algo o me da una app?", "acceptedAnswer": { "@type": "Answer", "text": "No instalas nada. El panel es web. Para padres y jugadores hay una app iOS + Android con tu marca, sin coste adicional." } }
       ]
     }
     </script>
 
-    <!-- CTA FINAL -->
     <section class="final-cta" style="padding: var(--space-9) 0; background: var(--deep); color: white; text-align: center;">
       <div class="container">
-        <h2 style="color: white; margin-bottom: var(--space-4);">Empieza con tu academia de pádel en 14 días.</h2>
+        <h2 style="color: white; margin-bottom: var(--space-4);">Empieza con tu club de balonmano en 14 días.</h2>
         <p style="max-width: 60ch; margin: 0 auto var(--space-6); font-size: var(--text-md); color: #c2dae5;">Migramos tus alumnos, cuotas e historial desde Excel o tu gestor actual. Operativo el día 14, optimizado con IA el día 30.</p>
         <a href="/#demo" class="btn btn-primary" style="background: var(--cyan-accent); color: var(--deep);">Reservar demo</a>
         <div class="micro" style="margin-top: var(--space-5); font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: 0.18em; color: rgba(255,255,255,0.55);">SIN TARJETA · 30 DÍAS DE PRUEBA · CANCELA CUANDO QUIERAS</div>
