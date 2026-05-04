@@ -320,26 +320,28 @@
             <p style="margin-top: var(--space-2);">Mantener un espacio libre alrededor del isotipo igual al <strong>25% de su tamaño</strong>. <strong>Tamaño mínimo: 48px</strong> — por debajo, el dashboard semicircular y el patrón distintivo del deporte se difuminan y pierden legibilidad. Excepciones permitidas a 24-32px: favicon, app icon, badge de notificación, avatar de redes, iconos in-product (UI assistant). Documentadas en Cap 14 · 09 · simplificado micro.</p>
           </div>
 
-          <h2 style="margin-top: var(--space-9);">Área de protección del lockup</h2>
-          <p style="max-width: 70ch; color: #4b5563; margin-top: var(--space-3);">Cuando el lockup convive con otros elementos (texto, imagen, otros logos), debe respetarse un colchón mínimo igual a la <strong>cap-height del wordmark</strong> alrededor de toda la composición. Nada cruza esa frontera — ni textos, ni bordes, ni gráficos.</p>
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); margin-top: var(--space-6);">
-            <div style="padding: var(--space-7); background: var(--foam); border-radius: 10px; border: 2px dashed rgba(26,143,199,0.35); position: relative;">
-              <div style="position: absolute; top: var(--space-3); left: var(--space-3); font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.10em; color: var(--brew-blue);">X · CAP-HEIGHT</div>
-              <div style="display: flex; align-items: center; justify-content: center; gap: var(--space-1); height: 130px;">
-                <dashboll-ball size="88"></dashboll-ball>
-                <div class="wordmark" style="font-size: 32px;">dashbo<span class="brand-l brand-l-1">l</span><span class="brand-l brand-l-2">l</span></div>
+          <div class="card" style="margin-top: var(--space-7);">
+            <h2 style="margin-top: 0;">Área de protección del lockup</h2>
+            <p style="max-width: 70ch; color: #4b5563; margin-top: var(--space-3);">Cuando el lockup convive con otros elementos (texto, imagen, otros logos), debe respetarse un colchón mínimo igual a la <strong>cap-height del wordmark</strong> alrededor de toda la composición. Nada cruza esa frontera — ni textos, ni bordes, ni gráficos.</p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-5); margin-top: var(--space-5);">
+              <div style="padding: var(--space-6); background: white; border-radius: 10px; border: 2px dashed rgba(26,143,199,0.35); position: relative;">
+                <div style="position: absolute; top: var(--space-3); left: var(--space-3); font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.10em; color: var(--brew-blue);">X · CAP-HEIGHT</div>
+                <div style="display: flex; align-items: center; justify-content: center; gap: var(--space-1); height: 130px;">
+                  <dashboll-ball size="88"></dashboll-ball>
+                  <div class="wordmark" style="font-size: 32px;">dashbo<span class="brand-l brand-l-1">l</span><span class="brand-l brand-l-2">l</span></div>
+                </div>
+                <p style="font-size: 11px; color: #6b7280; margin-top: var(--space-3); text-align: center;">El borde discontinuo cyan marca el aire mínimo: una <strong>cap-height (X)</strong> alrededor de la composición. Nada entra ahí.</p>
               </div>
-              <p style="font-size: 11px; color: #6b7280; margin-top: var(--space-3); text-align: center;">El borde discontinuo cyan marca el aire mínimo: una <strong>cap-height (X)</strong> alrededor de la composición. Nada entra ahí.</p>
-            </div>
-            <div style="padding: var(--space-5); background: white; border: 1px solid #e5e7eb; border-radius: 10px;">
-              <span class="label">QUÉ NO HACER</span>
-              <ul style="margin-top: var(--space-3); padding-left: var(--space-4); font-size: 12px; color: #4b5563; line-height: 1.7;">
-                <li>Pegar texto al lockup sin respetar la cap-height de aire.</li>
-                <li>Apoyar el lockup contra un borde de imagen o de container.</li>
-                <li>Superponer el lockup a un fondo con ruido visual sin colchón.</li>
-                <li>Reducir el aire en composiciones "compactas" para ganar espacio.</li>
-              </ul>
-              <p style="font-size: 11px; color: #6b7280; margin-top: var(--space-3);"><strong>El aire es parte del logo</strong>, no decoración. Quitarlo degrada la presencia de la marca.</p>
+              <div style="padding: var(--space-5); background: white; border: 1px solid #e5e7eb; border-radius: 10px;">
+                <span class="label">QUÉ NO HACER</span>
+                <ul style="margin-top: var(--space-3); padding-left: var(--space-4); font-size: 12px; color: #4b5563; line-height: 1.7;">
+                  <li>Pegar texto al lockup sin respetar la cap-height de aire.</li>
+                  <li>Apoyar el lockup contra un borde de imagen o de container.</li>
+                  <li>Superponer el lockup a un fondo con ruido visual sin colchón.</li>
+                  <li>Reducir el aire en composiciones "compactas" para ganar espacio.</li>
+                </ul>
+                <p style="font-size: 11px; color: #6b7280; margin-top: var(--space-3);"><strong>El aire es parte del logo</strong>, no decoración. Quitarlo degrada la presencia de la marca.</p>
+              </div>
             </div>
           </div>
         </div>
