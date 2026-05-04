@@ -83,7 +83,7 @@
   flex-direction: column;
 }
 .chapter::after {
-  content: counter(page, decimal-leading-zero);
+  content: none;
   position: absolute;
   bottom: 12mm;
   right: var(--page-margin);
@@ -232,27 +232,23 @@
     border-radius: 0;
     border: none;
     width: 297mm;
-    min-height: 210mm;
+    min-height: 230mm;
     height: auto;
     max-height: none;
-    padding: 14mm 18mm;
-    page-break-after: always;
-    break-after: page;
-    /* CRÍTICO: permitir que el contenido fluya a múltiples páginas si no cabe en una.
-       Antes max-height: 210mm + overflow: hidden recortaba el contenido de chapters
-       densos (Cap 06 anti-patterns 6 cards, Cap 07 construcción + área protección,
-       Cap 08 skins 7+1, Cap 13 mockups 3+2, Cap 14 variantes 12 cards). */
+    padding: 10mm 16mm;
+    page-break-before: always;
+    break-before: page;
     overflow: visible;
     break-inside: auto;
     page-break-inside: auto;
   }
-  .chapter:last-child {
-    page-break-after: auto;
-    break-after: auto;
+  .chapter:first-of-type {
+    page-break-before: auto;
+    break-before: auto;
   }
   .chapter-header {
-    margin-bottom: var(--space-5);
-    padding-bottom: var(--space-3);
+    margin-bottom: var(--space-4);
+    padding-bottom: var(--space-2);
   }
   /* Evitar que cards individuales se rompan a la mitad */
   .card,
@@ -262,7 +258,7 @@
     page-break-inside: avoid;
   }
   @page {
-    size: A4 landscape;
+    size: 297mm 240mm;
     margin: 0;
   }
 }

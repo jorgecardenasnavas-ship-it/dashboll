@@ -39,8 +39,6 @@ await new Promise(r => setTimeout(r, 500));
 console.log(`Generando PDF en ${OUTPUT}...`);
 await page.pdf({
   path: OUTPUT,
-  format: 'A4',
-  landscape: true,
   printBackground: true,
   displayHeaderFooter: false,
   margin: { top: '0', bottom: '0', left: '0', right: '0' },
