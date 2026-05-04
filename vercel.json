@@ -15,7 +15,8 @@
       ]
     }
   ],
-  "rewrites": [
-    { "source": "/manual", "destination": "/manual.html" }
+  "redirects": [
+    { "source": "/manual", "destination": "/pdf/manual.pdf", "permanent": false },
+    { "source": "/manual.html", "destination": "/pdf/manual.pdf", "permanent": false }
   ]
 }
