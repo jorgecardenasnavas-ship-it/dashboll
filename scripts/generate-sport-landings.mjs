@@ -318,6 +318,7 @@ function renderLanding(s) {
       <ul>
         <li><a href="/#producto">Producto</a></li>
         <li><a href="/#multideporte">Multideporte</a></li>
+        <li><a href="/blog">Blog</a></li>
         <li><a href="/#precios">Planes</a></li>
         <li><a href="/#faq">FAQ</a></li>
       </ul>
@@ -487,11 +488,11 @@ ${renderFaqSchema(s.faqs)}
           </ul>
         </div>
         <div>
-          <h4>Legal</h4>
+          <h4>Recursos</h4>
           <ul>
-            <li><a href="/#privacidad">Privacidad</a></li>
-            <li><a href="/#terminos">Términos</a></li>
-            <li><a href="/#cookies">Cookies</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/manual">Manual de marca</a></li>
+            <li><a href="mailto:hola@dashboll.app">Contacto</a></li>
           </ul>
         </div>
       </div>

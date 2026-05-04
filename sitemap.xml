@@ -49,6 +49,42 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://dashboll.vercel.app/blog</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dashboll.vercel.app/blog/bajar-morosidad-academia-deportiva</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dashboll.vercel.app/blog/pasar-excel-software-academia-deportiva</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dashboll.vercel.app/blog/organizar-americano-padel-software</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dashboll.vercel.app/blog/cuanto-te-cuesta-gestionar-academia-whatsapp</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dashboll.vercel.app/blog/software-multideporte-vs-software-por-deporte</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://dashboll.vercel.app/pdf/manual.pdf</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>monthly</changefreq>
