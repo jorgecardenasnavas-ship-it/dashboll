@@ -1429,6 +1429,10 @@ section.compact { padding: var(--space-7) 0; }
   .solves-grid, .feature-grid, .flows-grid, .how-steps, .security-grid, .price-grid {
     grid-template-columns: 1fr !important;
   }
+  /* Override inline 3-col grids (decide section, sport pages) en móvil */
+  div[style*="grid-template-columns: repeat(3"] {
+    grid-template-columns: 1fr !important;
+  }
   .multisport-grid { grid-template-columns: repeat(2, 1fr); }
   .operators .row { flex-direction: column; align-items: flex-start; }
   .operators .stat { gap: var(--space-4); }

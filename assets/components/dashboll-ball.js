@@ -125,4 +125,14 @@ class DashbollBall extends HTMLElement {
 
 customElements.define('dashboll-ball', DashbollBall);
 
+// Cerrar el menú móvil al pulsar cualquier enlace dentro del overlay
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('.web-nav ul a, .web-nav .cta');
+  if (link && document.body.classList.contains('nav-open')) {
+    document.body.classList.remove('nav-open');
+    const toggle = document.querySelector('.nav-toggle');
+    if (toggle) toggle.setAttribute('aria-expanded', 'false');
+  }
+});
+
 export { DashbollBall, SPORTS, BREW_BLUE, DEEP, CYAN, FOAM };
