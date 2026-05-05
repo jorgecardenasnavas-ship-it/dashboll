@@ -129,14 +129,36 @@ SourceForge tiene visibilidad alta para queries comparativas en IA. Usa los **te
 
 ---
 
-## Asset pack (lo que tendrás que adjuntar)
+## Asset pack — capturas listas para subir
 
-Estos archivos los puedo preparar yo cuando los necesites — avísame:
+Estas imágenes están en `assets/screenshots/` y son las que adjuntarás en cada formulario de directorio:
 
-1. **Logo Dashboll** (SVG + PNG 512×512 + PNG 1200×630)
-2. **Capturas de pantalla** del producto (3-4 imágenes 1280×800)
-3. **Hero image / og-image** (1200×630) — ya existe, está en `assets/og/og-default.png`
-4. **Vídeo demo** (60s, MP4) — opcional para fase 2
+### Capturas desktop (1440×900 @2x — formato premium)
+
+1. **`01-hero-dashboll.png`** — Hero principal con la pelota Dashboll y el headline. **Úsalo como imagen principal/destacada** en todos los directorios.
+
+2. **`02-decide-ia-preguntas.png`** — Las 6 preguntas que la IA contesta automáticamente (rendimiento de coaches, retención, riesgo de baja, ocupación). Es la captura que **mejor explica el diferencial de IA**. Úsala como segunda imagen en Capterra/GetApp.
+
+3. **`03-panel-ranking-coaches.png`** ⭐ — El panel de Ranking de Coaches con datos de rendimiento, Bonus/Malus automático y cuestionario post-entrenamiento. **Es la más "UI" del set** — la que más se parece a un dashboard real. Úsala como captura de portada de producto en Appvizer y SoftwareDoIt.
+
+4. **`04-flujos-3-roles.png`** — Los 3 flujos de uso (Head Coach / Coach / Player) con mockups de la app. Útil para mostrar que cubrís múltiples perfiles de usuario.
+
+5. **`05-comparativa-tabla.png`** — La tabla "Dashboll vs lo que probablemente usas hoy". Útil cuando el directorio acepta una sección "differenciadores".
+
+### Capturas mobile (390×844 @3x — responsive)
+
+6. **`06-hero-mobile.png`** — Hero en móvil. Para directorios que aceptan capturas de app móvil.
+7. **`07-panel-ranking-mobile.png`** — Panel de ranking en móvil. Para mostrar versión responsive.
+
+### Logo y otros
+
+- **Logo en SVG vectorial:** componente `<dashboll-ball>` en `assets/components/dashboll-ball.js` — si necesitas un PNG estático del logo en 512×512 o 1200×630, dilo y lo exporto.
+- **og-image existente:** `assets/og/og-default.png` (1200×630) — sirve como imagen "social" si el directorio la pide.
+
+### Pendientes para fase 2 (opcional)
+
+- **Vídeo demo de 30-60 segundos** — solo lo necesitarás en G2 y SourceForge para subir el ranking.
+- **Capturas reales del SaaS** cuando esté en producción real — sustituirán a estas mockups.
 
 ---
 
