@@ -3,6 +3,8 @@
    Reusa tokens.css y styles.css del manual.
    ==================================================================== */
 
+html { overflow-x: hidden; }
+
 .web-body {
   background: var(--foam);
   font-family: var(--font-sans);
@@ -91,6 +93,8 @@ section.compact { padding: var(--space-7) 0; }
   body.nav-open { overflow: hidden; }
   body.nav-open .web-nav {
     background: white;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
   }
   body.nav-open .web-nav ul,
   body.nav-open .web-nav .cta {
