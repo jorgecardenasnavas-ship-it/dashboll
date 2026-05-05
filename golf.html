@@ -12,6 +12,11 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_ES">
   <meta property="og:url" content="https://dashboll.vercel.app/golf">
+  <meta property="og:image" content="https://dashboll.vercel.app/assets/og/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:image" content="https://dashboll.vercel.app/assets/og/og-default.png">
+
   <link rel="stylesheet" href="assets/tokens.css?v=20260504">
   <link rel="stylesheet" href="assets/styles.css?v=20260504">
   <link rel="stylesheet" href="assets/web.css?v=20260504">
@@ -57,7 +62,7 @@
         <li><a href="/#precios">Planes</a></li>
         <li><a href="/#faq">FAQ</a></li>
       </ul>
-      <a href="/#demo" class="cta">Reservar demo</a>
+      <a href="/#demo" class="cta">Reservar demo</a> <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" onclick="document.body.classList.toggle('nav-open');this.setAttribute('aria-expanded',document.body.classList.contains('nav-open'))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
     </div>
   </nav>
 
@@ -313,6 +318,7 @@
       </div>
       <div class="legal">
         <span>© 2026 Dashboll · Hecho en Málaga</span>
+        <span><a href="/privacidad" style="color:inherit">Privacidad</a> · <a href="/terminos" style="color:inherit">Términos</a> · <a href="/cookies" style="color:inherit">Cookies</a></span>
         <span>Hosted en EU · GDPR compliant</span>
       </div>
     </div>

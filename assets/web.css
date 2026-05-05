@@ -71,6 +71,54 @@ section.compact { padding: var(--space-7) 0; }
 }
 .web-nav .cta:hover { background: var(--brew-blue); color: white; }
 
+/* Botón hamburguesa - oculto en desktop */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: 10px;
+  margin: -10px;
+  color: var(--deep);
+}
+.nav-toggle svg { display: block; width: 26px; height: 26px; }
+
+/* Mobile nav */
+@media (max-width: 820px) {
+  .nav-toggle { display: inline-flex; }
+  .web-nav ul,
+  .web-nav .cta { display: none; }
+  body.nav-open { overflow: hidden; }
+  body.nav-open .web-nav {
+    background: white;
+  }
+  body.nav-open .web-nav ul,
+  body.nav-open .web-nav .cta {
+    display: flex;
+  }
+  body.nav-open .web-nav ul {
+    position: fixed;
+    top: 60px; left: 0; right: 0;
+    bottom: 0;
+    flex-direction: column;
+    background: white;
+    padding: var(--space-6) var(--space-5);
+    gap: var(--space-4);
+    z-index: 99;
+    overflow-y: auto;
+  }
+  body.nav-open .web-nav ul li { width: 100%; border-bottom: 1px solid #e5e7eb; padding-bottom: var(--space-3); }
+  body.nav-open .web-nav ul a { font-size: var(--text-md); display: block; padding: 6px 0; }
+  body.nav-open .web-nav .cta {
+    position: fixed;
+    bottom: var(--space-5); left: var(--space-5); right: var(--space-5);
+    text-align: center;
+    z-index: 100;
+    padding: 14px 16px;
+    font-size: var(--text-md);
+  }
+}
+
 /* === BOTONES === */
 .btn {
   display: inline-flex;
@@ -144,9 +192,14 @@ section.compact { padding: var(--space-7) 0; }
 }
 .hero h1 .hero-h1-tag {
   display: block;
-  font-size: clamp(40px, 5vw, 72px);
+  font-size: clamp(28px, 5vw, 72px);
   letter-spacing: -0.04em;
-  line-height: 1;
+  line-height: 1.05;
+  word-break: break-word;
+  hyphens: auto;
+}
+.hero h1 .hero-h1-kw {
+  word-break: break-word;
 }
 .hero .sub {
   font-size: var(--text-md);
