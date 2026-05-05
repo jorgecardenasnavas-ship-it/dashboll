@@ -55,6 +55,24 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://dashboll.vercel.app/comparativa/dashboll-vs-playtomic</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://dashboll.vercel.app/comparativa/dashboll-vs-matchpoint</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://dashboll.vercel.app/alternativas-playtomic</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://dashboll.vercel.app/blog/bajar-morosidad-academia-deportiva</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>monthly</changefreq>
