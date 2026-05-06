@@ -36,14 +36,14 @@ code {
   color: var(--brew-blue);
 }
 
-/* Wordmark "ll" — las puntas superiores en cyan-accent (mejora/gain progresiva,
-   misma narrativa que el 25% cyan del semicírculo del isotipo).
+/* Wordmark "ll" — las puntas superiores con acento contextual (mejora/gain progresiva,
+   misma narrativa que el 25% del semicírculo del isotipo).
    Primera "l": 25% (la mejora estándar). Segunda "l": 32% (mejora acumulada).
-   Para fondos oscuros se sobreescribe --ll-base via inline style.
-   Para 1 tinta no se usan estos spans. */
+   Por defecto sobre fondo claro: court-500 (verde cancha).
+   Para fondos oscuros se sobreescribe --ll-base + --cyan-tone via inline style. */
 :root {
   --ll-base: var(--deep);
-  --cyan-tone: var(--cyan-accent);
+  --cyan-tone: var(--accent-on-light);
 }
 .brand-l {
   background-image: linear-gradient(
@@ -70,14 +70,15 @@ code {
   color: inherit;
 }
 
-/* Separador cyan brand-native entre palabras del respaldo (Sport ▎ Academy ▎ Manager).
-   Mini-franja vertical en cyan-accent que extrae el 25% del semicírculo dashboard
-   como elemento gráfico. Único Dashboll. Escala con el font-size del padre. */
+/* Separador brand-native entre palabras del respaldo (Sport ▎ Academy ▎ Manager).
+   Mini-franja vertical con acento contextual (court-500 sobre claro · lima sobre oscuro)
+   que extrae el 25% del semicírculo dashboard como elemento gráfico.
+   Único Dashboll. Escala con el font-size del padre. */
 .brand-bar {
   display: inline-block;
   width: 2px;
   height: 0.85em;
-  background: var(--cyan-accent);
+  background: var(--accent-on-light);
   vertical-align: -0.10em;
   flex-shrink: 0;
 }

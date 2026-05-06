@@ -1,9 +1,9 @@
 // Paleta sincronizada con tokens.css (Court at Dusk · 2026)
 const BREW_BLUE = '#1F6B52';   // court-500 · verde cancha
 const DEEP = '#0A1410';        // ink-900 · tinta
-const CYAN = '#C8FF3D';        // lime-400 · acento eléctrico
-const FOAM = '#F4EFE6';        // bone · crema cálida
-const WHITE = '#ffffff';
+const CYAN = '#C8FF3D';        // lime-400 · acento eléctrico (SOLO sobre fondos oscuros)
+const FOAM = '#F4EFE6';        // bone · crema cálida (sustituye al blanco puro)
+const WHITE = '#F4EFE6';       // bone · ningún blanco puro en la marca
 const BLACK = '#000000';
 
 const SPORTS = ['padel', 'tennis', 'basket', 'football', 'golf', 'pickleball', 'handball'];

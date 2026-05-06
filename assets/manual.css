@@ -14,8 +14,8 @@
   top: 0;
   height: 100vh;
   padding: var(--space-6) var(--space-5);
-  border-right: 1px solid #e5e7eb;
-  background: white;
+  border-right: 1px solid var(--border-soft-on-light);
+  background: var(--bone);
   overflow-y: auto;
 }
 .manual-nav .brand {
@@ -29,7 +29,7 @@
   font-family: var(--font-mono);
   font-size: var(--text-xs);
   letter-spacing: 0.10em;
-  color: #9ca3af;
+  color: var(--text-muted-on-light);
   margin-bottom: var(--space-6);
 }
 .manual-nav ol {
@@ -47,7 +47,7 @@
   gap: var(--space-3);
   padding: var(--space-2) var(--space-3);
   font-size: var(--text-sm);
-  color: #4b5563;
+  color: var(--text-muted-on-light);
   border-radius: 6px;
   transition: all 0.15s;
 }
@@ -55,12 +55,12 @@
   content: counter(chapter, decimal-leading-zero);
   font-family: var(--font-mono);
   font-size: var(--text-xs);
-  color: #9ca3af;
+  color: var(--text-muted-on-light);
   flex-shrink: 0;
 }
 .manual-nav a:hover { background: var(--foam); color: var(--deep); }
-.manual-nav a.active { background: var(--deep); color: white; }
-.manual-nav a.active::before { color: var(--cyan-accent); }
+.manual-nav a.active { background: var(--surface-inverse); color: var(--text-on-dark); }
+.manual-nav a.active::before { color: var(--accent-on-dark); }
 
 /* Cuerpo del manual */
 .manual-body {
@@ -74,8 +74,8 @@
   min-height: var(--page-height);
   padding: var(--page-margin);
   margin: var(--space-6) auto;
-  background: white;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  background: var(--bone);
+  box-shadow: var(--shadow-card);
   position: relative;
   page-break-after: always;
   break-after: page;
@@ -90,7 +90,7 @@
   font-family: var(--font-mono);
   font-size: var(--text-xs);
   letter-spacing: 0.10em;
-  color: #9ca3af;
+  color: var(--text-muted-on-light);
 }
 .chapter-header {
   display: flex;
@@ -98,13 +98,13 @@
   align-items: baseline;
   margin-bottom: var(--space-7);
   padding-bottom: var(--space-4);
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid var(--border-soft-on-light);
 }
 .chapter-header .num {
   font-family: var(--font-mono);
   font-size: var(--text-xs);
   letter-spacing: 0.16em;
-  color: var(--brew-blue);
+  color: var(--accent-on-light);
 }
 .chapter-content {
   flex: 1;
@@ -123,8 +123,8 @@
 
 /* Bloques de cita (la voz de Dashboll) */
 .dashboll-says {
-  background: var(--deep);
-  color: white;
+  background: var(--surface-inverse);
+  color: var(--text-on-dark);
   padding: var(--space-5);
   border-radius: 10px;
   font-family: var(--font-mono);
@@ -132,7 +132,7 @@
   line-height: 1.7;
 }
 .dashboll-says .head {
-  color: var(--cyan-accent);
+  color: var(--accent-on-dark);
   font-size: var(--text-xs);
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -156,7 +156,7 @@
     top: 0;
     height: auto;
     border-right: none;
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid var(--border-soft-on-light);
     padding: var(--space-5) var(--space-4);
   }
   .manual-nav .brand {
@@ -189,7 +189,7 @@
     margin: var(--space-4) 0;
     border-radius: 0;
     box-shadow: none;
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid var(--border-soft-on-light);
   }
   .chapter::after {
     bottom: 8px;
@@ -223,7 +223,7 @@
 
 /* Print: chapters fluyen sin recortar contenido */
 @media print {
-  body { background: white; }
+  body { background: var(--bone); }
   .manual-nav { display: none; }
   .manual-shell { grid-template-columns: 1fr; }
   .chapter {

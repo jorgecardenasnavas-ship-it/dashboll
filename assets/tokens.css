@@ -47,41 +47,93 @@
 }
 
 :root {
-  /* Brand palette — Court at Dusk (rediseño 2026)
-     Tokens semánticos antiguos conservan sus nombres para herencia,
-     pero apuntan ahora a la nueva paleta deporte+IA. */
-  --brew-blue:    #1F6B52;  /* court-500 · verde cancha principal */
-  --deep:         #0A1410;  /* ink-900 · tinta verde-negra */
-  --cyan-accent:  #C8FF3D;  /* lime-400 · acento eléctrico, IA */
-  --foam:         #F4EFE6;  /* bone · crema cálida */
+  /* ====================================================================
+     Dashboll · Court at Dusk (v1.1 · 2026)
+     5 colores oficiales + tokens contextuales con regla de oro del lima.
 
-  /* Nuevos tokens 2026 */
-  --court-700:    #0F2E24;  /* verde profundo cancha — superficies elevadas */
-  --court-500:    #1F6B52;  /* alias semántico de --brew-blue */
-  --lime-400:     #C8FF3D;  /* alias semántico de --cyan-accent */
-  --lime-200:     #E8FFB0;  /* glow / chips IA / hover */
-  --bone:         #F4EFE6;  /* alias de --foam */
-  --mist-300:     #D6CFC4;  /* bordes y separadores cálidos */
+     REGLA DE ORO
+     ------------
+     El lima --lime-400 (#C8FF3D) SOLO se usa sobre fondos oscuros
+     (--ink-900 / --court-700). Sobre fondos claros (crema/blanco) da
+     contraste 1.2:1 — invisible — y debe sustituirse por --court-500
+     (verde cancha) que da 5:1 sobre crema.
+
+     Para no equivocarse: usar SIEMPRE los tokens semánticos
+     `--accent-on-light` y `--accent-on-dark` en lugar de los atómicos.
+     ==================================================================== */
+
+  /* --- Atómicos (5 oficiales) ---------------------------------------- */
+  --court-500:    #1F6B52;  /* verde cancha principal */
+  --court-700:    #0F2E24;  /* verde profundo · superficies elevadas */
+  --lime-400:     #C8FF3D;  /* acento eléctrico · SOLO sobre fondos oscuros */
+  --bone:         #F4EFE6;  /* crema cálida · sustituye al blanco puro */
+  --ink-900:      #0A1410;  /* tinta verde-negra · texto y fondos */
+
+  /* Aliases legados (no usar en código nuevo) */
+  --brew-blue:    var(--court-500);
+  --deep:         var(--ink-900);
+  --cyan-accent:  var(--lime-400);
+  --foam:         var(--bone);
+
+  /* Variantes auxiliares oficiales */
+  --lime-200:     #E8FFB0;  /* glow lima · solo sobre fondos oscuros */
+  --mist-300:     #D6CFC4;  /* bordes y separadores cálidos sobre crema */
   --carbon-600:   #3F4845;  /* texto secundario sobre claro */
-  --ink-900:      #0A1410;  /* alias de --deep */
 
-  /* Sport ball skins */
+  /* --- Tokens semánticos contextuales (USAR ESTOS) ------------------- */
+
+  /* Superficies */
+  --surface-base:        var(--bone);        /* fondo claro por defecto */
+  --surface-inverse:     var(--ink-900);     /* fondo oscuro por defecto */
+  --surface-brand:       var(--court-500);   /* fondo verde marca */
+  --surface-brand-deep:  var(--court-700);   /* fondo verde profundo */
+
+  /* Texto */
+  --text-on-light:       var(--ink-900);     /* texto principal sobre claro */
+  --text-on-dark:        var(--bone);        /* texto principal sobre oscuro */
+  --text-muted-on-light: var(--carbon-600);  /* secundario sobre claro */
+  --text-muted-on-dark:  #C2DAE5;            /* secundario sobre oscuro */
+
+  /* Acentos — la pieza que resuelve el síntoma del header */
+  --accent-on-light:     var(--court-500);   /* verde cancha · sobre crema/claro */
+  --accent-on-dark:      var(--lime-400);    /* lima · sobre tinta/verde profundo */
+
+  /* CTAs */
+  --cta-primary-bg:      var(--court-500);
+  --cta-primary-text:    var(--bone);        /* NUNCA blanco puro */
+  --cta-primary-hover:   var(--court-700);
+  --cta-secondary-border: var(--court-500);
+  --cta-secondary-text:  var(--court-500);
+
+  /* Estados */
+  --focus-ring-on-light: var(--court-500);   /* anillo de foco sobre claro */
+  --focus-ring-on-dark:  var(--lime-400);    /* anillo de foco sobre oscuro */
+
+  /* Bordes y separadores */
+  --border-soft-on-light: var(--mist-300);
+  --border-soft-on-dark:  rgba(244, 239, 230, 0.12);
+
+  /* Sombras (derivadas de tinta, nunca de negro puro) */
+  --shadow-soft:  0 2px 8px rgba(10, 20, 16, 0.08);
+  --shadow-card:  0 8px 24px rgba(10, 20, 16, 0.12);
+
+  /* Sport ball skins (blancos puros prohibidos · ahora crema) */
   --ball-padel:       #d4e668;
   --ball-tennis:      #e8f266;
   --ball-basket:      #e8723a;
-  --ball-football:    #ffffff;
-  --ball-golf:        #ffffff;
-  --ball-pickleball:  #ffffff;
-  --ball-handball:    #ffffff;
+  --ball-football:    var(--bone);
+  --ball-golf:        var(--bone);
+  --ball-pickleball:  var(--bone);
+  --ball-handball:    var(--bone);
 
   /* Stitch / detail colors per sport */
-  --stitch-padel:       #ffffff;
-  --stitch-tennis:      #ffffff;
-  --stitch-basket:      #1a1a1a;
-  --stitch-football:    #1a1a1a;
+  --stitch-padel:       var(--bone);
+  --stitch-tennis:      var(--bone);
+  --stitch-basket:      var(--ink-900);
+  --stitch-football:    var(--ink-900);
   --stitch-golf:        #d4d4d4;
-  --stitch-pickleball:  #1a1a1a;
-  --stitch-handball:    #04476a;
+  --stitch-pickleball:  var(--ink-900);
+  --stitch-handball:    var(--court-700);
 
   /* Typography */
   --font-sans: 'Geist', system-ui, -apple-system, sans-serif;
@@ -116,6 +168,6 @@
   --page-margin: 18mm;
 
   /* Versioning */
-  --brand-version: "v1.0";
+  --brand-version: "v1.1";
   --brand-month:   "Mayo 2026";
 }
