@@ -14,9 +14,5 @@
         { "key": "Cache-Control", "value": "public, max-age=300, must-revalidate" }
       ]
     }
-  ],
-  "redirects": [
-    { "source": "/manual", "destination": "/pdf/manual.pdf", "permanent": false },
-    { "source": "/manual.html", "destination": "/pdf/manual.pdf", "permanent": false }
   ]
 }
