@@ -1,10 +1,34 @@
 // Paleta sincronizada con tokens.css (Court at Dusk · 2026)
 const BREW_BLUE = '#1F6B52';   // court-500 · verde cancha
+const COURT_700 = '#0F2E24';   // verde profundo · acento del 25% sobre fondos claros
 const DEEP = '#0A1410';        // ink-900 · tinta
 const CYAN = '#C8FF3D';        // lime-400 · acento eléctrico (SOLO sobre fondos oscuros)
 const FOAM = '#F4EFE6';        // bone · crema cálida (sustituye al blanco puro)
 const WHITE = '#F4EFE6';       // bone · ningún blanco puro en la marca
 const BLACK = '#000000';
+
+// Detecta la luminancia del fondo efectivo (sube por el árbol DOM hasta encontrar bg explícito).
+// Devuelve número en [0,1]. >0.5 = fondo claro. Permite que el isotipo elija el acento del 25%
+// según contexto: lima brilla sobre oscuro, verde profundo destaca sobre claro.
+function effectiveBgLuminance(el) {
+  let cur = el.parentElement;
+  const docEl = document.documentElement;
+  while (cur && cur !== docEl) {
+    const bg = getComputedStyle(cur).backgroundColor;
+    if (bg && bg !== 'rgba(0, 0, 0, 0)' && bg !== 'transparent') {
+      const m = bg.match(/\d+(\.\d+)?/g);
+      if (m && m.length >= 3) {
+        const a = m.length >= 4 ? parseFloat(m[3]) : 1;
+        if (a > 0.1) {
+          const [r, g, b] = m.slice(0, 3).map(Number);
+          return (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+        }
+      }
+    }
+    cur = cur.parentElement;
+  }
+  return 0.95; // default fondo claro (crema)
+}
 
 const SPORTS = ['padel', 'tennis', 'basket', 'football', 'golf', 'pickleball', 'handball'];
 
@@ -68,7 +92,7 @@ function pattern(sport, patternColor) {
 }
 
 class DashbollBall extends HTMLElement {
-  static get observedAttributes() { return ['sport', 'size', 'tone']; }
+  static get observedAttributes() { return ['sport', 'size', 'tone', 'bg']; }
 
   connectedCallback() { this.render(); }
   attributeChangedCallback() { this.render(); }
@@ -94,7 +118,14 @@ class DashbollBall extends HTMLElement {
       patternColor = BLACK;
     } else {
       trackStroke = DEEP; trackOpacity = 0.10;
-      barMain = BREW_BLUE; barAccent = CYAN;
+      barMain = BREW_BLUE;
+      // Acento del 25% adaptativo al fondo: lima sobre oscuro, verde profundo sobre claro.
+      // Atributo `bg="dark"|"light"` permite override explícito; si no, autodetección.
+      const bgAttr = this.getAttribute('bg');
+      const onLight = bgAttr === 'light' ? true
+                    : bgAttr === 'dark'  ? false
+                    : effectiveBgLuminance(this) > 0.5;
+      barAccent = onLight ? COURT_700 : CYAN;
       ballFill = BREW_BLUE;
       patternColor = WHITE;
     }
