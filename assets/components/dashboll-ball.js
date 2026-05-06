@@ -122,8 +122,10 @@ class DashbollBall extends HTMLElement {
     const uid = Math.random().toString(36).slice(2, 8);
 
     // ---------- Geometría base ----------
+    // arcR=28 (no 30) para que el extremo del arco a 7 en punto no se salga
+    // del viewBox 80x80 — el linecap butt ahí dejaba un corte feo.
     const cx = 40, cy = 52, ballR = 22;
-    const arcR = 30, strokeW = 6;
+    const arcR = 28, strokeW = 6;
 
     const ang2pt = (deg, r = arcR) => {
       const rad = deg * Math.PI / 180;
