@@ -51,6 +51,7 @@ section.compact { padding: var(--space-7) 0; }
   letter-spacing: -0.04em;
   color: var(--deep);
 }
+.web-nav .brand:hover { --cyan-tone: var(--lime-400); }
 .web-nav ul {
   display: flex;
   gap: var(--space-5);
