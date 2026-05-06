@@ -119,13 +119,14 @@ class DashbollBall extends HTMLElement {
     } else {
       trackStroke = DEEP; trackOpacity = 0.10;
       barMain = BREW_BLUE;
-      // Acento del 25% adaptativo al fondo: lima sobre oscuro, verde profundo sobre claro.
+      // Acento del 25% adaptativo al fondo: lima sobre oscuro (brilla a 17.8:1),
+      // tinta sobre claro (4.2:1 contra el verde cancha — visible incluso a 32px).
       // Atributo `bg="dark"|"light"` permite override explícito; si no, autodetección.
       const bgAttr = this.getAttribute('bg');
       const onLight = bgAttr === 'light' ? true
                     : bgAttr === 'dark'  ? false
                     : effectiveBgLuminance(this) > 0.5;
-      barAccent = onLight ? COURT_700 : CYAN;
+      barAccent = onLight ? DEEP : CYAN;
       ballFill = BREW_BLUE;
       patternColor = WHITE;
     }
