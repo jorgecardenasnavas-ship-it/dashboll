@@ -119,14 +119,21 @@ class DashbollBall extends HTMLElement {
     } else {
       trackStroke = DEEP; trackOpacity = 0.10;
       barMain = BREW_BLUE;
-      // Acento del 25% adaptativo al fondo: lima sobre oscuro (brilla a 17.8:1),
-      // tinta sobre claro (4.2:1 contra el verde cancha — visible incluso a 32px).
-      // Atributo `bg="dark"|"light"` permite override explícito; si no, autodetección.
+      // Acento del 25% adaptativo a fondo Y tamaño:
+      //   sobre oscuro: SIEMPRE lima (brilla a 17.8:1).
+      //   sobre claro: lima si size >= 64 (mediano/grande: cromáticamente
+      //                destaca aunque WCAG marque 1.2:1, el ojo lo lee como
+      //                "destello eléctrico" — caso de las pelotas deportivas
+      //                a 100px, mockups, etc.), tinta si size < 64 (header,
+      //                cards FAQ, micro-iconos: ahí el lima se hace puntilla
+      //                y desaparece, hay que afirmar la firma 75/25 con
+      //                luminancia 4.2:1 contra el verde cancha).
+      // Atributo `bg="dark"|"light"` permite override explícito.
       const bgAttr = this.getAttribute('bg');
       const onLight = bgAttr === 'light' ? true
                     : bgAttr === 'dark'  ? false
                     : effectiveBgLuminance(this) > 0.5;
-      barAccent = onLight ? DEEP : CYAN;
+      barAccent = onLight ? (size < 64 ? DEEP : CYAN) : CYAN;
       ballFill = BREW_BLUE;
       patternColor = WHITE;
     }
