@@ -1,7 +1,8 @@
-const BREW_BLUE = '#1a8fc7';
-const DEEP = '#04476a';
-const CYAN = '#4DD0E1';
-const FOAM = '#fafafa';
+// Paleta sincronizada con tokens.css (Court at Dusk · 2026)
+const BREW_BLUE = '#1F6B52';   // court-500 · verde cancha
+const DEEP = '#0A1410';        // ink-900 · tinta
+const CYAN = '#C8FF3D';        // lime-400 · acento eléctrico
+const FOAM = '#F4EFE6';        // bone · crema cálida
 const WHITE = '#ffffff';
 const BLACK = '#000000';
 

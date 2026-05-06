@@ -47,11 +47,23 @@
 }
 
 :root {
-  /* Brand palette — constant signature */
-  --brew-blue:    #1a8fc7;
-  --deep:         #04476a;
-  --cyan-accent:  #4DD0E1;
-  --foam:         #fafafa;
+  /* Brand palette — Court at Dusk (rediseño 2026)
+     Tokens semánticos antiguos conservan sus nombres para herencia,
+     pero apuntan ahora a la nueva paleta deporte+IA. */
+  --brew-blue:    #1F6B52;  /* court-500 · verde cancha principal */
+  --deep:         #0A1410;  /* ink-900 · tinta verde-negra */
+  --cyan-accent:  #C8FF3D;  /* lime-400 · acento eléctrico, IA */
+  --foam:         #F4EFE6;  /* bone · crema cálida */
+
+  /* Nuevos tokens 2026 */
+  --court-700:    #0F2E24;  /* verde profundo cancha — superficies elevadas */
+  --court-500:    #1F6B52;  /* alias semántico de --brew-blue */
+  --lime-400:     #C8FF3D;  /* alias semántico de --cyan-accent */
+  --lime-200:     #E8FFB0;  /* glow / chips IA / hover */
+  --bone:         #F4EFE6;  /* alias de --foam */
+  --mist-300:     #D6CFC4;  /* bordes y separadores cálidos */
+  --carbon-600:   #3F4845;  /* texto secundario sobre claro */
+  --ink-900:      #0A1410;  /* alias de --deep */
 
   /* Sport ball skins */
   --ball-padel:       #d4e668;

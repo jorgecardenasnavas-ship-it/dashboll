@@ -22,10 +22,10 @@
   <meta name="twitter:description" content="Software multideporte para academias.">
   <link rel="preload" as="font" type="font/woff2" href="assets/fonts/Geist-ExtraBold.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="assets/fonts/Geist-Regular.woff2" crossorigin>
-  <link rel="stylesheet" href="assets/tokens.css?v=20260504">
-  <link rel="stylesheet" href="assets/styles.css?v=20260504">
-  <link rel="stylesheet" href="assets/web.css?v=20260504">
-  <script type="module" src="assets/components/dashboll-ball.js?v=20260504"></script>
+  <link rel="stylesheet" href="assets/tokens.css?v=20260506">
+  <link rel="stylesheet" href="assets/styles.css?v=20260506">
+  <link rel="stylesheet" href="assets/web.css?v=20260506">
+  <script type="module" src="assets/components/dashboll-ball.js?v=20260506"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -438,36 +438,70 @@
             <div class="role">FLUJO 01 · Head Coach</div>
             <h3>El negocio, en tiempo real.</h3>
             <p>Ingresos, ocupación, morosidad. Cuadrar caja en 30 segundos. Exportable a tu ERP.</p>
-            <div class="flow-mockup">
-              Abril ········ <span style="color: var(--cyan-accent);">+18,4%</span><br>
-              Cuotas ······· €14.200<br>
-              Bonos ········ €6.180<br>
-              Torneos ······ €4.000<br>
-              ─────────<br>
-              Total ········ €24.380
+            <div class="flow-ui flow-ui-dashboard">
+              <div class="flow-ui-head">
+                <span class="flow-ui-eyebrow">CIERRE · ABRIL 2026</span>
+                <span class="flow-ui-delta">+18,4%</span>
+              </div>
+              <div class="flow-ui-amount">€24.380</div>
+              <div class="flow-ui-bars">
+                <div class="flow-ui-bar"><span class="lbl">Cuotas</span><div class="bar"><i style="width: 100%;"></i></div><strong>€14.200</strong></div>
+                <div class="flow-ui-bar"><span class="lbl">Bonos</span><div class="bar"><i style="width: 44%;"></i></div><strong>€6.180</strong></div>
+                <div class="flow-ui-bar"><span class="lbl">Torneos</span><div class="bar"><i style="width: 28%;"></i></div><strong>€4.000</strong></div>
+              </div>
             </div>
           </article>
           <article class="flow-card">
             <div class="role">FLUJO 02 · Coach</div>
             <h3>Tu clase lista en 2 clicks.</h3>
             <p>Asistencia y feedback por alumno. Notas, vídeos y ejercicios planificados. Tu hora en pista, sin papeleo.</p>
-            <div class="flow-mockup">
-              Competición · 18:00<br>
-              Asistencia · 8/10<br>
-              ─────────<br>
-              Objetivo: revés cruzado + red
+            <div class="flow-ui flow-ui-class">
+              <div class="flow-ui-head">
+                <span class="flow-ui-eyebrow" style="color: var(--court-500);">PRÓXIMA · 18:00</span>
+                <span class="flow-ui-pill">Competición</span>
+              </div>
+              <div class="flow-ui-class-title">Sub-14 · Pista 3</div>
+              <div class="flow-ui-roster">
+                <span class="ck on">JM</span>
+                <span class="ck on">AL</span>
+                <span class="ck on">CR</span>
+                <span class="ck on">SP</span>
+                <span class="ck on">DG</span>
+                <span class="ck on">VT</span>
+                <span class="ck on">RH</span>
+                <span class="ck on">EM</span>
+                <span class="ck off">+2</span>
+              </div>
+              <div class="flow-ui-objective">
+                <span class="dot-mini"></span>
+                <span>Objetivo de hoy · <strong>revés cruzado + subida a red</strong></span>
+              </div>
             </div>
           </article>
           <article class="flow-card">
             <div class="role">FLUJO 03 · Player</div>
             <h3>Tu academia en tu bolsillo.</h3>
             <p>Reserva pista y clase, paga con wallet o Stripe, mira tu evolución y ranking interno.</p>
-            <div class="flow-mockup">
-              Mi nivel · 3.2<br>
-              Ranking · #14<br>
-              ─────────<br>
-              Próxima · Clínica de Revés<br>
-              19:30 · pista 2
+            <div class="flow-ui flow-ui-phone">
+              <div class="flow-ui-phone-header">
+                <span>9:41</span>
+                <span>●●● 5G</span>
+              </div>
+              <div class="flow-ui-phone-stats">
+                <div>
+                  <div class="lbl">MI NIVEL</div>
+                  <div class="num">3.2</div>
+                </div>
+                <div style="text-align: right;">
+                  <div class="lbl">RANKING</div>
+                  <div class="num">#14</div>
+                </div>
+              </div>
+              <div class="flow-ui-phone-next">
+                <div class="lbl">PRÓXIMA CLASE</div>
+                <div class="ttl">Clínica de Revés</div>
+                <div class="meta">19:30 · pista 2 · coach Eduardo</div>
+              </div>
             </div>
           </article>
         </div>
