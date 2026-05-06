@@ -1,15 +1,15 @@
 // Paleta sincronizada con tokens.css (Court at Dusk · 2026)
 const BREW_BLUE = '#1F6B52';   // court-500 · verde cancha
-const COURT_700 = '#0F2E24';   // verde profundo · acento del 25% sobre fondos claros
+const COURT_700 = '#0F2E24';   // verde profundo · superficies elevadas
 const DEEP = '#0A1410';        // ink-900 · tinta
-const CYAN = '#C8FF3D';        // lime-400 · acento eléctrico (SOLO sobre fondos oscuros)
+const CYAN = '#C8FF3D';        // lime-400 · acento eléctrico
 const FOAM = '#F4EFE6';        // bone · crema cálida (sustituye al blanco puro)
 const WHITE = '#F4EFE6';       // bone · ningún blanco puro en la marca
 const BLACK = '#000000';
 
 // Detecta la luminancia del fondo efectivo (sube por el árbol DOM hasta encontrar bg explícito).
-// Devuelve número en [0,1]. >0.5 = fondo claro. Permite que el isotipo elija el acento del 25%
-// según contexto: lima brilla sobre oscuro, verde profundo destaca sobre claro.
+// Devuelve número en [0,1]. >0.5 = fondo claro. Permite que el track sutil del isotipo
+// elija color según contexto.
 function effectiveBgLuminance(el) {
   let cur = el.parentElement;
   const docEl = document.documentElement;
@@ -33,9 +33,13 @@ function effectiveBgLuminance(el) {
 const SPORTS = ['padel', 'tennis', 'basket', 'football', 'golf', 'pickleball', 'handball'];
 
 // Geometría del isotipo en viewBox 80x80
-//   Pelota: cx=40 cy=52 r=24 (posición empírica que alinea el centro óptico con la x-height del wordmark)
-//   Dashboard semicírculo: radio 30 centrado en (40,52), arco de y=22 a y=52
-//   Dashboard perimeter = π × 30 = 94.25 (75% = 70.69, 25% = 23.56)
+//   Pelota: cx=40 cy=52 r=22 (alineada con x-height del wordmark "dashboll")
+//   Anillo exterior: radio 30, centrado en (40,52). Recorrido de 7 a 3 en punto (240°)
+//     · 75% verde court continuo, de θ=210° (7 en punto) a θ=30° (1 en punto)
+//     · leading gap de 7.5° antes del 25% discontinuo
+//     · 25% verde court con 4 segmentos (huecos transparentes), de θ=37.5° a θ=90° (3 en punto)
+//   Pulso interior (solo sin sport): 3 dots lima en el centro de la pelota,
+//     central r=6.5 + 2 ecos laterales r=3 con spacing 7 (solapamiento sutil)
 function pattern(sport, patternColor) {
   switch (sport) {
     case 'tennis':
@@ -56,10 +60,10 @@ function pattern(sport, patternColor) {
       `;
     case 'basket':
       return `
-        <line data-role="seam" x1="40" y1="28" x2="40" y2="76" stroke="${patternColor}" stroke-width="1.2"/>
-        <path data-role="seam" d="M 16,52 Q 40,46 64,52" stroke="${patternColor}" stroke-width="1.2" fill="none"/>
-        <path data-role="seam" d="M 22,30 Q 16,52 22,74" stroke="${patternColor}" stroke-width="1.2" fill="none"/>
-        <path data-role="seam" d="M 58,30 Q 64,52 58,74" stroke="${patternColor}" stroke-width="1.2" fill="none"/>
+        <line data-role="seam" x1="40" y1="30" x2="40" y2="74" stroke="${patternColor}" stroke-width="1.2"/>
+        <path data-role="seam" d="M 18,52 Q 40,46 62,52" stroke="${patternColor}" stroke-width="1.2" fill="none"/>
+        <path data-role="seam" d="M 22,32 Q 18,52 22,72" stroke="${patternColor}" stroke-width="1.2" fill="none"/>
+        <path data-role="seam" d="M 58,32 Q 62,52 58,72" stroke="${patternColor}" stroke-width="1.2" fill="none"/>
       `;
     case 'football':
       return `<polygon data-role="hex" points="48,52 44,45.07 36,45.07 32,52 36,58.93 44,58.93" fill="${patternColor}"/>`;
@@ -82,13 +86,27 @@ function pattern(sport, patternColor) {
       `;
     case 'handball':
       return `
-        <line data-role="seam" x1="40" y1="28" x2="40" y2="76" stroke="${patternColor}" stroke-width="1" stroke-dasharray="1.5,1"/>
-        <path data-role="seam" d="M 16,52 Q 40,40 64,52" stroke="${patternColor}" stroke-width="1" fill="none" stroke-dasharray="1.5,1"/>
-        <path data-role="seam" d="M 16,52 Q 40,64 64,52" stroke="${patternColor}" stroke-width="1" fill="none" stroke-dasharray="1.5,1"/>
+        <line data-role="seam" x1="40" y1="30" x2="40" y2="74" stroke="${patternColor}" stroke-width="1" stroke-dasharray="1.5,1"/>
+        <path data-role="seam" d="M 18,52 Q 40,40 62,52" stroke="${patternColor}" stroke-width="1" fill="none" stroke-dasharray="1.5,1"/>
+        <path data-role="seam" d="M 18,52 Q 40,64 62,52" stroke="${patternColor}" stroke-width="1" fill="none" stroke-dasharray="1.5,1"/>
       `;
     default:
       return '';
   }
+}
+
+// Helper para construir dasharray con N segmentos · ratio 1:1 dash/gap.
+// Añade un gap enorme final para evitar que SVG duplique el patrón
+// cuando tiene número impar de valores.
+function buildDashArr(arcLength, segCount) {
+  const s = arcLength / (2 * segCount - 1);
+  const parts = [];
+  for (let i = 0; i < segCount; i++) {
+    parts.push(s.toFixed(3));
+    if (i < segCount - 1) parts.push(s.toFixed(3));
+  }
+  parts.push((arcLength * 4).toFixed(2));
+  return parts.join(' ');
 }
 
 class DashbollBall extends HTMLElement {
@@ -98,66 +116,87 @@ class DashbollBall extends HTMLElement {
   attributeChangedCallback() { this.render(); }
 
   render() {
-    // Sin sport = isotipo genérico de marca (bola limpia + semicírculo dashboard).
-    // Con sport = variante deportiva con patrón. La identidad de Dashboll es la genérica.
     const sport = this.getAttribute('sport') || '';
     const size = parseInt(this.getAttribute('size') || '100', 10);
     const tone = this.getAttribute('tone'); // 'black' | 'white' | null (default = full color)
     const uid = Math.random().toString(36).slice(2, 8);
 
-    let trackStroke, trackOpacity, barMain, barAccent, ballFill, patternColor;
+    // ---------- Geometría base ----------
+    const cx = 40, cy = 52, ballR = 22;
+    const arcR = 30, strokeW = 6;
+
+    const ang2pt = (deg, r = arcR) => {
+      const rad = deg * Math.PI / 180;
+      return [cx + r * Math.sin(rad), cy - r * Math.cos(rad)];
+    };
+
+    // Anillo exterior: 7 → 3 en punto (240° recorrido)
+    const leadingGapDeg = 60 / 8;  // 7.5°
+    const [sx, sy] = ang2pt(210);
+    const [mx, my] = ang2pt(30);
+    const [mxShift, myShift] = ang2pt(30 + leadingGapDeg);
+    const [ex, ey] = ang2pt(90);
+    const path75 = `M ${sx.toFixed(2)},${sy.toFixed(2)} A ${arcR},${arcR} 0 1 1 ${mx.toFixed(2)},${my.toFixed(2)}`;
+    const path25 = `M ${mxShift.toFixed(2)},${myShift.toFixed(2)} A ${arcR},${arcR} 0 0 1 ${ex.toFixed(2)},${ey.toFixed(2)}`;
+    const dashLen = 2 * Math.PI * arcR * ((60 - leadingGapDeg) / 360);
+    const dashArr = buildDashArr(dashLen, 4);
+
+    // ---------- Colores según tone ----------
+    let trackColor, trackOpacity, ringColor, ballFill, pulseColor, patternColor;
     if (tone === 'black') {
-      trackStroke = BLACK; trackOpacity = 0.13;
-      barMain = BLACK; barAccent = BLACK;
+      trackColor = BLACK; trackOpacity = 0.13;
+      ringColor = BLACK;
       ballFill = BLACK;
       patternColor = WHITE;
+      pulseColor = WHITE;  // contrastante a la pelota
     } else if (tone === 'white') {
-      trackStroke = WHITE; trackOpacity = 0.22;
-      barMain = WHITE; barAccent = WHITE;
+      trackColor = WHITE; trackOpacity = 0.22;
+      ringColor = WHITE;
       ballFill = WHITE;
       patternColor = BLACK;
+      pulseColor = BLACK;
     } else {
-      trackStroke = DEEP; trackOpacity = 0.10;
-      barMain = BREW_BLUE;
-      // Acento del 25% adaptativo a fondo Y tamaño:
-      //   sobre oscuro: SIEMPRE lima (brilla a 17.8:1).
-      //   sobre claro: lima si size >= 64 (mediano/grande: cromáticamente
-      //                destaca aunque WCAG marque 1.2:1, el ojo lo lee como
-      //                "destello eléctrico" — caso de las pelotas deportivas
-      //                a 100px, mockups, etc.), tinta si size < 64 (header,
-      //                cards FAQ, micro-iconos: ahí el lima se hace puntilla
-      //                y desaparece, hay que afirmar la firma 75/25 con
-      //                luminancia 4.2:1 contra el verde cancha).
-      // Atributo `bg="dark"|"light"` permite override explícito.
+      // Modo full color
       const bgAttr = this.getAttribute('bg');
       const onLight = bgAttr === 'light' ? true
                     : bgAttr === 'dark'  ? false
                     : effectiveBgLuminance(this) > 0.5;
-      barAccent = onLight ? (size < 64 ? DEEP : CYAN) : CYAN;
+      trackColor = onLight ? DEEP : FOAM;
+      trackOpacity = 0.10;
+      ringColor = BREW_BLUE;
       ballFill = BREW_BLUE;
       patternColor = WHITE;
+      pulseColor = CYAN;  // lima sobre verde court · 5,1:1 (AA grande), funciona en cualquier fondo
     }
-    const accentOpacity = tone ? 0.55 : 1;
+
+    // ---------- Pulso central (solo en modo "marca", sin sport) ----------
+    const pulseSpacing = 7;
+    const pulseSvg = !sport ? `
+  <circle cx="${cx - pulseSpacing}" cy="${cy}" r="3" fill="${pulseColor}"/>
+  <circle cx="${cx}" cy="${cy}" r="6.5" fill="${pulseColor}"/>
+  <circle cx="${cx + pulseSpacing}" cy="${cy}" r="3" fill="${pulseColor}"/>` : '';
 
     this.innerHTML = `
 <svg width="${size}" height="${size}" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dashboll · ${sport}">
   <defs>
     <clipPath id="dball-clip-${uid}">
-      <circle cx="40" cy="52" r="24"/>
+      <circle cx="${cx}" cy="${cy}" r="${ballR}"/>
     </clipPath>
   </defs>
-  <!-- Semicírculo de cumplimiento (75% brew + 25% cyan), radio 30, centrado en (40,52). Perímetro = π × 30 = 94.25 -->
-  <path data-role="ring-track" d="M 10,52 A 30,30 0 0 1 70,52"
-        stroke="${trackStroke}" stroke-width="5" stroke-linecap="round" fill="none" opacity="${trackOpacity}"/>
-  <path data-role="dashboard-bar" d="M 10,52 A 30,30 0 0 1 70,52"
-        stroke="${barMain}" stroke-width="5" stroke-linecap="round" fill="none"
-        stroke-dasharray="70.69 94.25"/>
-  <path data-role="dashboard-bar" d="M 10,52 A 30,30 0 0 1 70,52"
-        stroke="${barAccent}" stroke-width="5" stroke-linecap="round" fill="none"
-        stroke-dasharray="23.56 94.25" stroke-dashoffset="-70.69" opacity="${accentOpacity}"/>
-  <!-- Pelota base maciza -->
-  <circle data-role="ball-base" cx="40" cy="52" r="24" fill="${ballFill}"/>
-  <!-- Patrón distintivo del deporte -->
+  <!-- Track sutil del 75% del recorrido -->
+  <path data-role="ring-track" d="${path75}"
+        stroke="${trackColor}" stroke-width="${strokeW}" stroke-linecap="butt" fill="none" opacity="${trackOpacity}"/>
+  <!-- Anillo 75% verde continuo (academia) -->
+  <path data-role="ring-bar" d="${path75}"
+        stroke="${ringColor}" stroke-width="${strokeW}" stroke-linecap="butt" fill="none"/>
+  <!-- Anillo 25% discontinuo: 4 segmentos verde court con huecos transparentes (Dashboll interviene) -->
+  <path data-role="ring-bar-segments" d="${path25}"
+        stroke="${ringColor}" stroke-width="${strokeW}" stroke-linecap="butt" fill="none"
+        stroke-dasharray="${dashArr}"/>
+  <!-- Pelota maciza -->
+  <circle data-role="ball-base" cx="${cx}" cy="${cy}" r="${ballR}" fill="${ballFill}"/>
+  ${pulseSvg}
+  <!-- Patrón distintivo del deporte (solo cuando hay sport) -->
   ${pattern(sport, patternColor).replace(/dball-clip(?!-)/g, `dball-clip-${uid}`)}
 </svg>`.trim();
   }
